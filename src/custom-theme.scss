@@ -1,4 +1,3 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
@@ -12,27 +11,138 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$ec-blocks-fe-primary: mat.define-palette(mat.$indigo-palette);
-$ec-blocks-fe-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$ec-blocks-fe-primary: mat.define-palette(
+  (
+    50: #fff4e6,
+    100: #ffe4c1,
+    200: #ffd398,
+    300: #ffc16e,
+    400: #ffb34f,
+    500: #ffa630,
+    600: #ff9e2b,
+    700: #ff9524,
+    800: #ff8b1e,
+    900: #ff7b13,
+    A100: #ffffff,
+    A200: #fffcfa,
+    A400: #ffddc7,
+    A700: #ffcead,
+    contrast: (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #000000,
+      500: #000000,
+      600: #000000,
+      700: #000000,
+      800: #000000,
+      900: #000000,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000,
+    ),
+  ),
+  500,
+  A400,
+  A700
+);
 
+$ec-blocks-fe-accent: mat.define-palette(
+  (
+    50: #e1f1fa,
+    100: #b5dcf3,
+    200: #83c5eb,
+    300: #51aee3,
+    400: #2c9cdd,
+    500: #078bd7,
+    600: #0683d3,
+    700: #0578cd,
+    800: #046ec7,
+    900: #025bbe,
+    A100: #e6f1ff,
+    A200: #b3d3ff,
+    A400: #80b5ff,
+    A700: #67a6ff,
+    contrast: (
+      50: #000000,
+      100: #000000,
+      200: #000000,
+      300: #000000,
+      400: #000000,
+      500: #ffffff,
+      600: #ffffff,
+      700: #ffffff,
+      800: #ffffff,
+      900: #ffffff,
+      A100: #000000,
+      A200: #000000,
+      A400: #000000,
+      A700: #000000,
+    ),
+  ),
+  500,
+  A400,
+  A700
+);
 // The warn palette is optional (defaults to red).
 $ec-blocks-fe-warn: mat.define-palette(mat.$red-palette);
 
+// display-4	112px, one-off header, usually at the top of the page (e.g. a hero header).
+// display-3	56px, one-off header, usually at the top of the page (e.g. a hero header).
+// display-2	45px, one-off header, usually at the top of the page (e.g. a hero header).
+// display-1	34px, one-off header, usually at the top of the page (e.g. a hero header).
+// headline	Section heading corresponding to the <h1> tag.
+// title	Section heading corresponding to the <h2> tag.
+// subheading-2	Section heading corresponding to the <h3> tag.
+// subheading-1	Section heading corresponding to the <h4> tag.
+// body-1	Base body text.
+// body-2	Bolder body text.
+// caption	Smaller body and hint text.
+// button	Buttons and anchors.
+// input	Form input fields.
+
+$my-custom-typography: mat.define-typography-config(
+  $display-3: mat.define-typography-level(4rem, 1, 700, 'Space Mono, monospace'),
+  $display-2: mat.define-typography-level(3.75rem, 1, 700, 'Space Mono, monospace'),
+  $display-1: mat.define-typography-level(3.5rem, 1, 700, 'Space Mono, monospace'),
+  $headline: mat.define-typography-level(3.125rem, 1, 700, 'Space Mono, monospace'),
+  $title: mat.define-typography-level(2.5rem, 1, 700, 'Space Mono, monospace'),
+  $subheading-2: mat.define-typography-level(2rem, 1, 700, 'Space Mono, monospace'),
+  $subheading-1: mat.define-typography-level(1.5rem, 1, 700, 'Space Mono, monospace'),
+  $body-2: mat.define-typography-level(1.25rem, 1, 700, 'Space Mono, monospace'),
+  $body-1: mat.define-typography-level(1rem, 1, 700, 'Space Mono, monospace'),
+  $caption: mat.define-typography-level(1rem, 1, 700, 'Space Mono, monospace'),
+  $button: mat.define-typography-level(1rem, 1, 700, 'Space Mono, monospace'),
+  $input: mat.define-typography-level(1rem, 1, 700, 'Space Mono, monospace'),
+);
+
+@include mat.core($my-custom-typography);
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$ec-blocks-fe-theme: mat.define-light-theme((
-  color: (
-    primary: $ec-blocks-fe-primary,
-    accent: $ec-blocks-fe-accent,
-    warn: $ec-blocks-fe-warn,
+$ec-blocks-fe-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $ec-blocks-fe-primary,
+      accent: $ec-blocks-fe-accent,
+      warn: $ec-blocks-fe-warn,
+    ),
+    typography: $my-custom-typography,
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($ec-blocks-fe-theme);
 
+html,
+body {
+  height: 100%;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
