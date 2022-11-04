@@ -1,0 +1,113 @@
+@use '../../../../../styles.scss'as root;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 5.375rem;
+  align-items: center;
+  padding: 0 10vw;
+  > * {
+    z-index: 10;
+  }
+}
+
+.navbar-switch > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-content, .left-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  & button {
+    margin: 0 1.25rem
+  }
+}
+
+.links {
+  width: fit-content;
+  padding: 0;
+}
+
+.button-logo {
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  :hover {
+    animation: animation-vertical 1s ease-in-out 1;
+  }
+  & img {
+    width: 15.76rem;
+    height: 3.125rem;
+  }
+  :active{
+    transform: scale(0.95);
+  }
+}
+
+.button-primary {
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.box {
+  height: 36px;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0 15px;
+  text-align: center;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  border-radius: 4px;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+  border-left: 2px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: root.$shadow;
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
