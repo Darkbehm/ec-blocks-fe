@@ -1,0 +1,17 @@
+<mat-card class="card">
+  <mat-card-title>
+    <div class="icon">
+      <fa-icon [icon]="feature.icon" class="front"></fa-icon>
+      <fa-icon [icon]="feature.icon" class="back"></fa-icon>
+    </div>
+    <div class="mat-subheading-2 title">{{ feature.title }}</div>
+  </mat-card-title>
+  <mat-card-content>
+    <p class="mat-body-2">{{ feature.description }}</p>
+  </mat-card-content>
+  <mat-card-actions class="actions">
+    <a mat-button color="accent" class="mat-body-2">
+      Ver más<span class="fira-code">-></span>
+    </a>
+  </mat-card-actions>
+</mat-card>

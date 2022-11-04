@@ -9,12 +9,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './modules/landing/components/navbar/navbar.component';
 import { HomeComponent } from './modules/landing/pages/home/home.component';
 import { BackgroundComponent } from './modules/landing/components/background/background.component';
+import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     BackgroundComponent,
+    CardLandingComponent,
   ],
   imports: [
     BrowserModule,
