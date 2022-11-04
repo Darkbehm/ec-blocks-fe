@@ -1,11 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-enum USER_TYPES {
-  admin = 'admin',
-  seller = 'seller',
-  buyer = 'buyer',
-  unknown = 'unknown',
-}
+import { USER_TYPES } from '../../models/User';
 
 @Component({
   selector: 'app-navbar',
