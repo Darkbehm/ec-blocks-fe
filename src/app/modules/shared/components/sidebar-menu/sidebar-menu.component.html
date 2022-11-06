@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <figure class="logo">
+    <img src="../../../../../assets/Logo3.svg" alt="logo" />
+  </figure>
+
+  <div class="menu">
+    <app-link-menu
+      *ngFor="let linkMenu of linksMenu"
+      [linkMenu]="linkMenu"
+      [css]="css"
+    ></app-link-menu>
+  </div>
+</div>
