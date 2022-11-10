@@ -1,2 +1,22 @@
-<app-background></app-background>
-<app-navbar></app-navbar>
+<div class="home">
+  <app-navbar></app-navbar>
+  <main>
+    <section class="title">
+      <h1
+        class="italic mat-headline back-white"
+        back="Crea tu tienda online en pocos clics"
+      >
+        Crea tu tienda online en pocos clics
+      </h1>
+      <p class="mat-body-2 slogan">
+        Unete a <strong>ec blocks</strong> y construye tu e-commerce de la forma
+        mas <strong>facil</strong>.
+      </p>
+    </section>
+    <section class="cards">
+      <app-card-landing *ngFor="let feature of features" [feature]="feature">
+      </app-card-landing>
+    </section>
+  </main>
+  <app-background></app-background>
+</div>
