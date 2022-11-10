@@ -9,6 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavbarComponent } from './modules/landing/components/navbar/navbar.component';
 import { HomeComponent } from './modules/landing/pages/home/home.component';
 import { BackgroundComponent } from './modules/landing/components/background/background.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { AdminModule } from './modules/admin/admin.module';
 import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { CardLandingComponent } from './modules/landing/components/card-landing/
     MaterialModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
+    SharedModule,
+    AdminModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
