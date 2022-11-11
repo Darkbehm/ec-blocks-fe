@@ -1,0 +1,70 @@
+<div class="options">
+  <app-manage-section
+    [options]="templates"
+    title="Planes"
+    name="Nuevo plan"
+    (optionSelected)="getOptionSelected($event)"
+    (addState)="getAddState($event)"
+  ></app-manage-section>
+</div>
+
+<form [formGroup]="templateForm" (ngSubmit)="save()" *ngIf="!isDefaultRoute">
+  <div class="container">
+    <div class="fields-plan">
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre del plan" formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripcion del plan</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <!-- <mat-form-field appearance="outline">
+                  <mat-label>Descripcion del plan</mat-label>
+                  <textarea matInput></textarea>
+                </mat-form-field> -->
+    </div>
+    <div class="images-container">
+      <app-drag-drop-file></app-drag-drop-file>
+    </div>
+
+    <div class="editors">
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> CSS editor </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-code-editor
+            language="css"
+            [code]="cssCode"
+            (getCode)="getCSSCode($event)"
+          ></app-code-editor>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> JS editor </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-code-editor
+            language="js"
+            [code]="jsCode"
+            (getCode)="getJSCode($event)"
+          ></app-code-editor>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <button type="submit" mat-raised-button color="accent" class="save-btn">
+      Guardar cambios
+    </button>
+  </div>
+</form>
