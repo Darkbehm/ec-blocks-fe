@@ -4,10 +4,12 @@ import { StoresComponent } from './pages/stores/stores.component';
 import { UsersComponent } from './pages/users/users.component';
 import { TemplatesComponent } from './pages/templates/templates.component';
 import { PlansComponent } from './pages/plans/plans.component';
+import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: AdminComponent,
     children: [
       {
         path: 'users',
@@ -25,10 +27,10 @@ const routes: Routes = [
         path: 'plans',
         component: PlansComponent,
       },
-      {
-        path: '**',
-        redirectTo: 'users',
-      },
+      // {
+      //   path: '**',
+      //   redirectTo: 'users',
+      // },
     ],
   },
 ];
