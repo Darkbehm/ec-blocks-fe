@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { USER_TYPES } from '../../models/User';
+import { USER_TYPES } from '../../models/user.model';
 
 @Component({
   selector: 'app-navbar',
