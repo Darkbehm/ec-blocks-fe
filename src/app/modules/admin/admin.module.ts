@@ -6,6 +6,8 @@ import { TemplatesComponent } from './pages/templates/templates.component';
 import { PlansComponent } from './pages/plans/plans.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '../../../material.module';
+import { AdminComponent } from './admin.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { RouterModule } from '@angular/router';
     StoresComponent,
     TemplatesComponent,
     PlansComponent,
+    AdminComponent,
   ],
-  imports: [CommonModule, RouterModule, SharedModule],
+  imports: [CommonModule, RouterModule, SharedModule, MaterialModule],
+  providers: [],
 })
 export class AdminModule {}

@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { LinkMenu } from '../../../shared/interfaces/link-menu.interface';
-import { linksMenu } from '../../utils/linksMenu';
+import { Component, ViewChild } from '@angular/core';
+import { User } from '../../interfaces/user.interface';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-users',
@@ -8,7 +9,71 @@ import { linksMenu } from '../../utils/linksMenu';
   styleUrls: ['./users.component.scss'],
 })
 export class UsersComponent {
-  links: LinkMenu[] = linksMenu;
+  displayedColumns: string[] = ['id', 'name', 'joined', 'actions'];
 
-  constructor() {}
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  users: User[] = [
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+    {
+      id: '507f191e810c19729de860ea',
+      name: 'Usuario X',
+      joined: new Date(),
+    },
+  ];
+
+  dataSource = new MatTableDataSource<User>(this.users);
 }
