@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { LinkMenu } from '../../../shared/interfaces/link-menu.interface';
+import { linksMenu } from '../../utils/linksMenu';
 
 @Component({
   selector: 'app-plans',
@@ -6,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./plans.component.scss'],
 })
 export class PlansComponent {
+  links: LinkMenu[] = linksMenu;
   constructor() {}
 }

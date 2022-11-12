@@ -5,16 +5,11 @@ $white-custom: #fafffd;
 $shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
 
-*, *::before, *::after {
-	box-sizing: border-box;
-}
-
-.italic-font {
-  font-style: italic;
-}
-
 $margin-left: 10vw;
 
+.italic {
+  font-style: italic;
+}
 
 .back-white::before {
   content: attr(back);
