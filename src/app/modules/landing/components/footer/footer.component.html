@@ -1,1 +1,54 @@
-<p>footer works!</p>
+<footer>
+  <section class="links">
+    <div
+      (click)="goHome()"
+      class="button-logo hvr-wobble-vertical"
+      data-replace="assets/Logo4.svg"
+    >
+      <img src="assets/Logo4.svg" alt="home" />
+    </div>
+    <div class="links-sections-wrapper">
+      <div class="links-section">
+        <span class="mat-subheading-2 head-section back-accent" back="Empresas"
+          >Empresas</span
+        >
+        <button mat-button class="link">
+          <span class="box-animation">Crear tienda</span>
+        </button>
+        <button mat-button class="link">
+          <span class="box-animation">Mostrar tienda</span>
+        </button>
+        <button mat-button class="link">
+          <span class="box-animation">Administrar</span>
+        </button>
+      </div>
+      <div class="links-section">
+        <span class="mat-subheading-2 head-section back-accent" back="Clientes"
+          >Clientes</span
+        >
+        <button mat-button class="link">
+          <span class="box-animation">Ver tiendas</span>
+        </button>
+      </div>
+      <div class="links-section">
+        <span
+          class="mat-subheading-2 head-section back-accent"
+          back="Sobre ec blocks"
+          >Sobre ec blocks</span
+        >
+        <button mat-button class="link">
+          <span class="box-animation">Nuestro equipo</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <div class="div-line"></div>
+  <section class="tos">
+    <button mat-button class="link mat-body-1">
+      <span class="box-animation">Términos de servicio</span>
+    </button>
+    <button mat-button class="link mat-body-1">
+      <span class="box-animation">Política de privacidad</span>
+    </button>
+  </section>
+</footer>

@@ -1,4 +1,4 @@
-@use '../../../../../styles.scss'as root;
+@use '../../../../../styles.scss' as root;
 
 .home {
   min-height: 3240px;
@@ -16,6 +16,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 25rem);
   grid-gap: clamp(2rem, 5vw, 9rem);
+  margin: 4rem 0;
 }
 
 .stores {
@@ -54,6 +55,7 @@ main {
 }
 
 .stores-section {
+  margin-top: 4rem;
   padding-top: root.$margin-left;
 
   h1 {
@@ -65,7 +67,30 @@ main {
   width: 52rem;
   height: 0.3rem;
   margin-left: calc(root.$margin-left * 2);
-  background-image: repeating-linear-gradient(180deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem), repeating-linear-gradient(270deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem), repeating-linear-gradient(0deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem);
+  background-image: repeating-linear-gradient(
+      180deg,
+      root.$primary,
+      root.$primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      root.$primary,
+      root.$primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      root.$primary,
+      root.$primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$primary 1.25rem
+    );
   background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
   background-position: 0 0, 0 0, 100% 0, 0 100%;
   background-repeat: no-repeat;
@@ -75,7 +100,30 @@ main {
   width: 52rem;
   height: 0.3rem;
   margin-left: auto;
-  background-image: repeating-linear-gradient(180deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem), repeating-linear-gradient(270deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem), repeating-linear-gradient(0deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem);
+  background-image: repeating-linear-gradient(
+      180deg,
+      root.$accent,
+      root.$accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      root.$accent,
+      root.$accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      root.$accent,
+      root.$accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      root.$accent 1.25rem
+    );
   background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
   background-position: 0 0, 0 0, 100% 0, 0 100%;
   background-repeat: no-repeat;
@@ -84,6 +132,7 @@ main {
 .button-accent {
   padding: 0;
   margin-bottom: 2rem;
+  box-shadow: root.$shadow;
 }
 
 .button-accent-text {
@@ -114,12 +163,12 @@ main {
 .actions {
   display: flex;
   flex-direction: column;
-  margin: 10rem calc(root.$margin-left * 0.5);
+  margin: 8rem calc(root.$margin-left * 0.5) 10rem;
   a {
     width: fit-content;
     align-self: flex-end;
   }
   .➡️ {
-    margin: 4rem 0 2rem;
+    margin: 10rem 0 2rem;
   }
 }
