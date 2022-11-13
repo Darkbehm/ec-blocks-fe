@@ -1,0 +1,58 @@
+<section class="container-modal-block">
+  <form>
+    <div class="fields-modal-container">
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Nombre del bloque</mat-label>
+        <input matInput placeholder="Nombre del bloque" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Color</mat-label>
+        <input matInput placeholder="Color" />
+      </mat-form-field>
+    </div>
+
+    <mat-tab-group [disablePagination]="true" [disableRipple]="true">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <fa-icon [icon]="faWrench"></fa-icon>
+          Components
+        </ng-template>
+        <div class="editor">
+          <app-code-editor language="json" [code]="jsonCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <fa-icon [icon]="faJS"></fa-icon>
+          Javascript
+        </ng-template>
+        <div class="editor">
+          <app-code-editor language="js" [code]="jsCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <fa-icon [icon]="faCSS"></fa-icon>
+          CSS
+        </ng-template>
+
+        <div class="editor">
+          <app-code-editor language="css" [code]="cssCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <fa-icon [icon]="faHTML"></fa-icon>
+          HTML
+        </ng-template>
+
+        <div class="editor">
+          <app-code-editor language="html" [code]="htmlCode"></app-code-editor>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </form>
+</section>

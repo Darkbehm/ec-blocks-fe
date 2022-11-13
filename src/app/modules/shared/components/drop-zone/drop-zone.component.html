@@ -1,0 +1,46 @@
+<div class="container">
+  <div
+    appDrag
+    (files)="fileDropped($event)"
+    [class]="'drop-container center color-' + color.slice(1, 7)"
+    [style]="{ color: color }"
+    (click)="inputFile.click()"
+    [max]="max"
+    [color]="color"
+    *ngIf="!file; else preview"
+  >
+    <fa-icon [icon]="faIcon" size="2x" [styles]="{ color: color }"></fa-icon>
+  </div>
+  <ng-template #preview>
+    <div class="preview">
+      <figure class="img-container">
+        <span class="overlay-img center">
+          <span>
+            <button class="btn-view">
+              <fa-icon
+                [icon]="faEye"
+                size="lg"
+                [styles]="{ color: '#078bd7' }"
+              ></fa-icon>
+            </button>
+            <button class="btn-delete" (click)="deleteImage(inputFile)">
+              <fa-icon
+                [icon]="faTrash"
+                size="lg"
+                [styles]="{ color: '#078bd7' }"
+              ></fa-icon>
+            </button>
+          </span>
+        </span>
+        <img [src]="file?.url" alt="file" />
+      </figure>
+    </div>
+  </ng-template>
+  <input
+    type="file"
+    class="file"
+    (change)="selectFile($event)"
+    multiple
+    #inputFile
+  />
+</div>

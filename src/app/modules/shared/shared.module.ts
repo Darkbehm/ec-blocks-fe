@@ -14,6 +14,7 @@ import { DragDropFileComponent } from './components/drag-drop-file/drag-drop-fil
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CodeEditorComponent } from './components/code-editor/code-editor.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
 
 @NgModule({
   exports: [
@@ -27,6 +28,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    DropZoneComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    DropZoneComponent,
   ],
 })
 export class SharedModule {}

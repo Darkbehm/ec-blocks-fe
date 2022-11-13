@@ -16,6 +16,13 @@ const routes: Routes = [
         (m) => m.AdminRoutingModule,
       ),
   },
+  {
+    path: 'business',
+    loadChildren: () =>
+      import('./modules/business/business-routing.module').then(
+        (m) => m.BusinessRoutingModule,
+      ),
+  },
 ];
 
 @NgModule({

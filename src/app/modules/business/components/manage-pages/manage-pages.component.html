@@ -1,0 +1,115 @@
+<form [formGroup]="pageForm" class="page-form">
+  <section class="manage-page-header">
+    <h1 class="title-page">{{ page.name || 'Default Page' }}</h1>
+    <div class="actions-page-form">
+      <mat-slide-toggle>Ver Lineas Guia</mat-slide-toggle>
+      <button mat-raised-button color="primary" class="preview-btn">
+        Ver Preview
+      </button>
+      <!-- <button mat-raised-button color="white-custom" class="lines-btn">
+        Ver Lineas Guia
+      </button> -->
+      <button type="submit" mat-raised-button color="accent" class="save-btn">
+        Guardar Cambios
+      </button>
+    </div>
+  </section>
+
+  <section class="workspace">
+    <div *ngFor="let i of rows" [class]="'element row-' + i"></div>
+    <div *ngFor="let i of columns" [class]="'element column-' + i"></div>
+    <div class="block navbar-block">
+      <div class="block-header">
+        <span class="block-title">Name...</span>
+        <span class="block-actions">
+          <button
+            mat-raised-button
+            color="white-custom"
+            class="lines-btn"
+            (click)="openDialog()"
+          >
+            Editar
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="preview-btn delete-block-btn"
+          >
+            Eliminar
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="block panel-block">
+      <div class="block-header">
+        <span class="block-title">Name...</span>
+        <span class="block-actions">
+          <button mat-raised-button color="white-custom" class="lines-btn">
+            Editar
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="preview-btn delete-block-btn"
+          >
+            Eliminar
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="block unnamed-block">
+      <div class="block-header">
+        <span class="block-title">Name...</span>
+        <span class="block-actions">
+          <button mat-raised-button color="white-custom" class="lines-btn">
+            Editar
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="preview-btn delete-block-btn"
+          >
+            Eliminar
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="block products-block">
+      <div class="block-header">
+        <span class="block-title">Name...</span>
+        <span class="block-actions">
+          <button mat-raised-button color="white-custom" class="lines-btn">
+            Editar
+          </button>
+          <button mat-raised-button color="primary" class="preview-btn">
+            Eliminar
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="block footer-block">
+      <div class="block-header">
+        <span class="block-title">Name...</span>
+        <span class="block-actions">
+          <button mat-raised-button color="white-custom" class="lines-btn">
+            Editar
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+            class="preview-btn delete-block-btn"
+          >
+            Eliminar
+          </button>
+        </span>
+      </div>
+    </div>
+  </section>
+</form>
+<!-- <mat-dialog-content class="mat-typography">
+  <app-edit-block></app-edit-block>
+</mat-dialog-content> -->

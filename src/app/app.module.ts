@@ -11,6 +11,7 @@ import { HomeComponent } from './modules/landing/pages/home/home.component';
 import { BackgroundComponent } from './modules/landing/components/background/background.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { BusinessModule } from './modules/business/business.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AdminModule } from './modules/admin/admin.module';
     FontAwesomeModule,
     SharedModule,
     AdminModule,
+    BusinessModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

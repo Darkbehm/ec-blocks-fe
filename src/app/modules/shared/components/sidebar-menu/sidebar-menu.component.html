@@ -1,6 +1,13 @@
 <div class="sidebar">
   <figure class="logo" routerLink="/home">
-    <img src="../../../../../assets/Logo3.svg" alt="logo" />
+    <img
+      [src]="
+        css === 'admin'
+          ? '../../../../../assets/Logo3.svg'
+          : '../../../../../assets/Logo4.svg'
+      "
+      alt="logo"
+    />
   </figure>
 
   <div class="menu">

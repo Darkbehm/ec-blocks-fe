@@ -8,23 +8,47 @@ li {
     width: 100%;
     height: 112px;
     cursor: pointer;
-    transition: all .3s ease-in;
+    transition: background-color 0.4s ease-in;
 }
 
-.mat-icon::before {
-    transition: all .3s ease-in;
+.business-icon, .admin-icon {
+    font-size: 24px;
+    background-color: transparent;
+    transition: color 0.4s ease-in;
 }
 
-.admin, mat-icon {
+.admin, .admin-icon {
     color: rootStyles.$primary;
-    // fill: rootStyles.$primary;
 }
 
-.admin:hover, .admin:hover mat-icon, .active {
+.admin:hover, .active-admin {
     color: rootStyles.$white-custom;
     background-color: rootStyles.$accent;
     border-radius: 0px 10px 10px 0px;
 }
+
+.admin:hover .admin-icon {
+    color: rootStyles.$white-custom;
+}
+
+.business, .business-icon {
+    color: rootStyles.$accent;
+}
+
+
+.business:hover,  .active-business {
+    color: rootStyles.$white-custom;
+    background-color: rootStyles.$primary;
+    // border-radius: 0px 10px 10px 0px;
+}
+
+
+.business:hover .business-icon {
+    color: rootStyles.$white-custom;
+}
+
+
+
 
 
 

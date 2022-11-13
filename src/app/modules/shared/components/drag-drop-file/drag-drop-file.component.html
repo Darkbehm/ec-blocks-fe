@@ -1,31 +1,39 @@
+<span class="title-container">
+  <h4>{{ title }}</h4>
+  <a href="#" *ngIf="fileList.length > 3" class="see-more">Ver todos</a>
+</span>
 <div class="container">
   <div
     appDrag
     (files)="fileDropped($event)"
-    class="drop-container center"
+    [class]="'drop-container center color-' + color.slice(1, 7)"
+    [style]="{ color: color }"
     (click)="inputFile.click()"
+    [color]="color"
+    [max]="max"
+    [fileType]="fileType"
   >
-    <fa-icon
-      [icon]="faImages"
-      size="lg"
-      [styles]="{ color: '#078bd7' }"
-    ></fa-icon>
+    <fa-icon [icon]="faIcon" size="2x" [styles]="{ color: color }"></fa-icon>
   </div>
   <input
     type="file"
     class="file"
     (change)="selectFile($event)"
     multiple
+    [accept]="fileType !== 'other' ? fileType + '/*' : '*'"
     #inputFile
   />
 
   <div class="preview-container" *ngIf="fileList.length > 0; else empty">
-    <figure *ngFor="let file of fileList; let index" class="img-container">
+    <figure
+      *ngFor="let file of fileList.slice(0, 3); let index"
+      class="img-container"
+    >
       <span class="overlay-img center">
         <span>
           <button class="btn-view">
             <fa-icon
-              [icon]="faEye"
+              [icon]="faAction"
               size="lg"
               [styles]="{ color: '#078bd7' }"
             ></fa-icon>
@@ -39,13 +47,32 @@
           </button>
         </span>
       </span>
-      <img [src]="file.url" alt="img" />
+
+      <img
+        *ngIf="fileType === 'image'; else altFile"
+        [src]="file.url"
+        alt="img"
+      />
+      <ng-template #altFile>
+        <span class="alt-file center">
+          <span class="alt-file-container">
+            <fa-icon
+              [icon]="altIcon"
+              size="2x"
+              [styles]="{ color: '#FFA630' }"
+            ></fa-icon>
+            <span class="file-name">
+              {{ file.file.name }}
+            </span>
+          </span>
+        </span>
+      </ng-template>
     </figure>
   </div>
 
   <ng-template #empty>
     <div class="center">
-      <span class="empty-text">Todavia no has subido imagenes</span>
+      <span class="empty-text">{{ emptyMessage }}</span>
     </div>
   </ng-template>
 </div>
