@@ -3,7 +3,7 @@
   <main>
     <section class="title">
       <h1
-        class="italic mat-headline back-white"
+        class="italic-font mat-headline back-white"
         back="Crea tu tienda online en pocos clics"
       >
         Crea tu tienda online en pocos clics
@@ -17,6 +17,35 @@
       <app-card-landing *ngFor="let feature of features" [feature]="feature">
       </app-card-landing>
     </section>
+    <section class="stores-section">
+      <h1 class="italic-font mat-headline">Tiendas mas visitadas</h1>
+      <div class="dotted-primary"></div>
+      <div class="stores">
+        <app-card-store
+          *ngFor="let store of stores"
+          [store]="store"
+        ></app-card-store>
+        <a mat-button color="accent" class="mat-body-2 italic-font ➡️">
+          Ver más<span class="fira-code">-></span>
+        </a>
+      </div>
+      <div class="italic-font margin-right">Tu tambien puedes estar aqui</div>
+    </section>
+    <section class="actions">
+      <div class="action">
+        <button mat-raised-button color="accent" class="button-accent">
+          <span class="box-animation mat-subheading-2 button-accent-text"
+            >Empieza gratis</span
+          >
+        </button>
+        <div class="mat-body-1">No se necesita tarjeta de crédito.</div>
+      </div>
+      <a mat-button color="primary" class="mat-body-2 ➡️">
+        Volver arriba <span class="fira-code">↑</span>
+      </a>
+      <div class="dotted-accent"></div>
+    </section>
+    <app-footer></app-footer>
   </main>
   <app-background></app-background>
 </div>

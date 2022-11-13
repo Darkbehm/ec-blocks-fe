@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { faChartColumn, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faClone } from '@fortawesome/free-regular-svg-icons';
 import Feature from '../../models/feature.model';
+import { Store } from 'src/app/modules/admin/interfaces/store.interface';
+import { fakeStores } from 'src/utils/fakeData';
 
 @Component({
   selector: 'app-home',
@@ -33,6 +35,8 @@ export class HomeComponent implements OnInit {
       link: 'link3',
     },
   ];
+
+  stores: Store[] = fakeStores.slice(0, 4);
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit(): void {}
 }

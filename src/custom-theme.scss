@@ -115,7 +115,7 @@ $my-custom-typography: mat.define-typography-config(
   $subheading-1:
     mat.define-typography-level(1.5rem, 1, 700, 'Space Mono, monospace'),
   $body-2: mat.define-typography-level(1.25rem, 1, 400, 'Space Mono, monospace'),
-  $body-1: mat.define-typography-level(1rem, 1, 400, 'Space Mono, monospace'),
+  $body-1: mat.define-typography-level(0.875rem, 1, 400, 'Space Mono, monospace'),
   $caption: mat.define-typography-level(1rem, 1, 400, 'Space Mono, monospace'),
   $button: mat.define-typography-level(1rem, 1, 700, 'Space Mono, monospace'),
   $input: mat.define-typography-level(1rem, 1, 400, 'Space Mono, monospace'),

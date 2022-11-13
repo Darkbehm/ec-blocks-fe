@@ -1,4 +1,4 @@
-@use '../../../../../styles.scss' as root;
+@use '../../../../../styles.scss'as root;
 
 .home {
   min-height: 3240px;
@@ -17,6 +17,19 @@ main {
   grid-template-columns: repeat(3, 25rem);
   grid-gap: clamp(2rem, 5vw, 9rem);
 }
+
+.stores {
+  padding: calc(root.$margin-left * 0.5);
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 0.5fr;
+  grid-gap: clamp(2rem, 2.5vw, 5rem);
+
+  .➡️ {
+    align-self: center;
+  }
+}
+
 .title {
   position: relative;
   height: 100vh;
@@ -24,10 +37,12 @@ main {
   width: 53.125rem;
   display: grid;
   grid-template-rows: 1fr 1fr 0.75fr;
+
   h1 {
     align-self: end;
     position: inherit;
   }
+
   .slogan {
     padding-left: 7.125rem;
     margin-top: 4rem;
@@ -35,5 +50,76 @@ main {
     color: white;
     align-self: start;
     position: inherit;
+  }
+}
+
+.stores-section {
+  padding-top: root.$margin-left;
+
+  h1 {
+    padding-left: root.$margin-left;
+  }
+}
+
+.dotted-primary {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: calc(root.$margin-left * 2);
+  background-image: repeating-linear-gradient(180deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem), repeating-linear-gradient(270deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem), repeating-linear-gradient(0deg, root.$primary, root.$primary 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$primary 1.25rem);
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.dotted-accent {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: auto;
+  background-image: repeating-linear-gradient(180deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem), repeating-linear-gradient(270deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem), repeating-linear-gradient(0deg, root.$accent, root.$accent 0.625rem, transparent 0.625rem, transparent 1.25rem, root.$accent 1.25rem);
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.button-accent {
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.button-accent-text {
+  padding: 2rem;
+  margin: 0;
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+}
+
+.margin-right {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: calc(root.$margin-left * 0.5);
+  top: -2rem;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem calc(root.$margin-left * 0.5);
+  a {
+    width: fit-content;
+    align-self: flex-end;
+  }
+  .➡️ {
+    margin: 4rem 0 2rem;
   }
 }
