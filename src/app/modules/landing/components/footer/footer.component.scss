@@ -1,0 +1,90 @@
+@use '../../../../../styles.scss' as root;
+
+footer {
+  z-index: -10;
+  min-height: 16.875rem;
+  background-color: root.$black;
+  display: grid;
+  grid-template-rows: 1fr 1px 3.75rem;
+  color: root.$white-custom;
+  justify-content: center;
+  box-shadow: #078bd7 0px -1rem, #2a9bdd 0px -2rem, #5cb2e5 0px -3rem,
+    #95cdee 0px -4rem, #d5ebf8 0px -5rem;
+}
+
+.div-line {
+  width: 90vw;
+  height: 1px;
+  background-color: root.$white-custom;
+  opacity: 0.5;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 3rem;
+  width: 100%;
+}
+
+.button-logo {
+  padding: 0.5rem;
+  padding-left: 0;
+  cursor: pointer;
+  margin-right: 1rem;
+
+  :hover {
+    animation: animation-vertical 1s ease-in-out 1;
+  }
+
+  & img {
+    width: 15.76rem;
+    height: 3.125rem;
+  }
+
+  :active {
+    transform: scale(0.95);
+  }
+}
+
+.links-sections-wrapper {
+  display: flex;
+}
+
+.links-section {
+  min-width: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+.link {
+  z-index: 1;
+  width: fit-content;
+  padding: 0;
+  span {
+    text-transform: none;
+    font-weight: normal;
+  }
+}
+
+.head-section {
+  z-index: 1;
+  position: relative;
+}
+
+.back-accent::before {
+  top: 0.125rem;
+  left: 0.125rem;
+}
+
+.tos {
+  height: 3.75rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  .link {
+    margin-left: 2rem;
+    .box-animation {
+      padding: 0 0.5rem;
+    }
+  }
+}
