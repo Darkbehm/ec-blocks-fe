@@ -37,6 +37,13 @@ export class HomeComponent implements OnInit {
   ];
 
   stores: Store[] = fakeStores.slice(0, 4);
+
+  scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit(): void {}
 }

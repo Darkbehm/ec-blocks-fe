@@ -40,7 +40,12 @@
         </button>
         <div class="mat-body-1">No se necesita tarjeta de crédito.</div>
       </div>
-      <a mat-button color="primary" class="mat-body-2 ➡️">
+      <a
+        mat-button
+        color="primary"
+        class="mat-body-2 ➡️"
+        (click)="scrollToTop()"
+      >
         Volver arriba <span class="fira-code">↑</span>
       </a>
       <div class="dotted-accent"></div>
