@@ -1,0 +1,17 @@
+<form [formGroup]="form">
+  <div class="code-container line-numbers">
+    <textarea
+      #textArea
+      placeholder="Add your code here"
+      class="text-area-code-editor"
+      formControlName="content"
+      spellcheck="false"
+    ></textarea>
+    <pre
+      aria-hidden="true"
+      class="pre line-numbers"
+      #pre
+    ><code [ngClass]="['code', 'language-' + language]" #codeContent></code>
+      </pre>
+  </div>
+</form>

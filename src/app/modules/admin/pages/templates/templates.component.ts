@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { LinkMenu } from '../../../shared/interfaces/link-menu.interface';
-import { linksMenu } from '../../utils/linksMenu';
+import { Template } from '../../interfaces/template.interface';
 
 @Component({
   selector: 'app-templates',
@@ -8,6 +7,24 @@ import { linksMenu } from '../../utils/linksMenu';
   styleUrls: ['./templates.component.scss'],
 })
 export class TemplatesComponent {
-  links: LinkMenu[] = linksMenu;
   constructor() {}
+
+  templates: Template[] = [
+    {
+      id: 'dbwkadbjw',
+      name: 'Template 1',
+      description: 'vbdhwavdhw',
+      jsCode: `let x = 1;`,
+    },
+    {
+      id: 'dnlknkadbjw',
+      name: 'Template 2',
+      description: 'vbdhwafbjkbjkvdhw',
+    },
+    {
+      id: 'dnlknfwbajfbjk',
+      name: 'Template 3',
+      description: 'vbdhwaf vdhw fwbk',
+    },
+  ];
 }
