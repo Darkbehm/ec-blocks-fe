@@ -1,10 +1,14 @@
-@use '../../../../../styles.scss'as root;
+@use '../../../../../styles.scss' as root;
 
 .blue-gradient {
   position: absolute;
   width: 100%;
   height: clamp(1000px, 150%, 1500px);
-  background: linear-gradient(180deg, rgba(0, 115, 179, 0) 0%, root.$accent 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 115, 179, 0) 0%,
+    root.$accent 100%
+  );
   z-index: -10;
   transform: skewY(-30deg);
   transform-origin: top left;
@@ -16,7 +20,8 @@
   overflow-x: hidden;
 }
 
-.rhomb-container-2, .rhomb-container-1 {
+.rhomb-container-2,
+.rhomb-container-1 {
   position: absolute;
   top: 30vh;
   right: 0;
@@ -28,7 +33,7 @@
   overflow: hidden;
 }
 
-.rhomb-container-1{
+.rhomb-container-1 {
   top: 40vh;
   right: auto;
   left: 0;
@@ -40,7 +45,8 @@
   overflow: hidden;
 }
 
-.rhomb-2, .rhomb-1 {
+.rhomb-2,
+.rhomb-1 {
   position: absolute;
   left: 400px;
   height: 800px;
@@ -67,4 +73,3 @@
   left: 300px;
   transform: scale(0.75);
 }
-
