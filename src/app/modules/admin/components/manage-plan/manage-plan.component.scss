@@ -1,74 +1,74 @@
 @use '../../../../../styles.scss' as stylesRoot;
 
 .options {
-    position: absolute;
-    left: 320px;
-    z-index: 2;
+  position: absolute;
+  left: 320px;
+  z-index: 2;
 }
 
 .view {
-    overflow: auto;
-    position: absolute;
-    top: 0;
-    width: calc(100% - 640px);
-    left: 640px;
-    height: 100%;
-    z-index: 1;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 640px);
+  left: 640px;
+  height: 100%;
+  z-index: 1;
 }
 
 form {
-    padding: 2em;
-    height: 100%;
-    display: flex;
+  padding: 2em;
+  height: 100%;
+  display: flex;
 }
 
-.fields-plan, .features-plan-container {
-    height: 100%;
-    width: 50%;
-    padding: 1em;
+.fields-plan,
+.features-plan-container {
+  height: 100%;
+  width: 50%;
+  padding: 1em;
 }
 
 .features-plan-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .features-plan-subcontainer {
-    margin-top: 5em;
+  margin-top: 5em;
 }
 
 .fields-plan {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .feature-container {
-    display: block;
-    width: 100%;
+  display: block;
+  width: 100%;
 }
 
 mat-checkbox {
-    padding: 1em 0;
-    font-size: 16px;
+  padding: 1em 0;
+  font-size: 16px;
 }
 
 mat-form-field {
-    width: 100%;
-    font-weight: 500;
-    border-color: #000000;
-    font-size: 15px;
+  width: 100%;
+  font-weight: 500;
+  border-color: #000000;
+  font-size: 15px;
 }
 
 mat-divider {
-    border-color: #000000;
+  border-color: #000000;
 }
 
 .save-btn {
-    font-size: 14px;
-    width: 200px;
-    align-self: flex-end;
+  font-size: 14px;
+  width: 200px;
+  align-self: flex-end;
 }
-

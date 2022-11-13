@@ -1,4 +1,4 @@
-@use '../../../../../styles.scss'as root;
+@use '../../../../../styles.scss' as root;
 
 .home {
   min-height: 3240px;
@@ -23,7 +23,7 @@ main {
   left: root.$margin-left;
   width: 53.125rem;
   display: grid;
-  grid-template-rows:  1fr 1fr 0.75fr;
+  grid-template-rows: 1fr 1fr 0.75fr;
   h1 {
     align-self: end;
     position: inherit;
@@ -37,5 +37,3 @@ main {
     position: inherit;
   }
 }
-
-

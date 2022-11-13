@@ -13,6 +13,7 @@ import { DragDirective } from './directives/drag.directive';
 import { DragDropFileComponent } from './components/drag-drop-file/drag-drop-file.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CodeEditorComponent } from './components/code-editor/code-editor.component';
+import { CardStoreComponent } from './components/card-store/card-store.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    CardStoreComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    CardStoreComponent,
   ],
 })
 export class SharedModule {}
