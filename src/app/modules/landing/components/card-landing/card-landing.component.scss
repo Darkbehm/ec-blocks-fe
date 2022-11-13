@@ -1,0 +1,36 @@
+@use '../../../../../styles.scss'as root;
+
+.card {
+  aspect-ratio: 4/5;
+  padding-left: 2.5rem;
+  padding-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 3.125rem;
+}
+
+.icon {
+  font-size: 100px;
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin-top: 1.625rem;
+
+  .front {
+    position: absolute;
+    z-index: 1;
+  }
+
+  .back {
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    z-index: 0;
+    color: root.$primary;
+  }
+}
+
+.title {
+  margin-top: 2rem;
+}
