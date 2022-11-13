@@ -13,12 +13,14 @@ import { SharedModule } from './modules/shared/shared.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { BusinessModule } from './modules/business/business.module';
 
+import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
     BackgroundComponent,
+    CardLandingComponent,
   ],
   imports: [
     BrowserModule,
