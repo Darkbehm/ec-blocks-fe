@@ -25,7 +25,13 @@
           *ngFor="let store of stores"
           [store]="store"
         ></app-card-store>
-        <a mat-button color="accent" class="mat-body-2 italic-font ➡️">
+        <a
+          mat-button
+          color="accent"
+          class="mat-body-2 italic-font ➡️"
+          [routerLink]="['/stores']"
+          routerLinkActive="active"
+        >
           Ver más<span class="fira-code">-></span>
         </a>
       </div>
@@ -33,7 +39,13 @@
     </section>
     <section class="actions">
       <div class="action">
-        <button mat-raised-button color="accent" class="button-accent">
+        <button
+          mat-raised-button
+          color="accent"
+          class="button-accent"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
+        >
           <span class="box-animation mat-subheading-2 button-accent-text"
             >Empieza gratis</span
           >
