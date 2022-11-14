@@ -21,7 +21,9 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/business/business-routing.module').then(
         (m) => m.BusinessRoutingModule,
-      ),
+      )
+  },
+  {
     //everything else
     path: '**',
     redirectTo: '',
