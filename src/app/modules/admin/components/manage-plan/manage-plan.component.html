@@ -1,0 +1,66 @@
+<div class="options">
+  <app-manage-section
+    [options]="plans"
+    title="Planes"
+    name="Nuevo plan"
+    (optionSelected)="getOptionSelected($event)"
+    (addState)="getAddState($event)"
+  ></app-manage-section>
+</div>
+<div class="view">
+  <form [formGroup]="planForm" (ngSubmit)="save()" *ngIf="!isDefaultRoute">
+    <div class="fields-plan">
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre del plan" formControlName="name" />
+      </mat-form-field>
+
+      <!-- <mat-form-field appearance="outline" color="black">
+        <mat-label>Descripcion</mat-label>
+        <input
+          matInput
+          placeholder="Descripcion del plan"
+          formControlName="description"
+        />
+      </mat-form-field> -->
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripcion del plan</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Precio</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Precio del plan"
+          formControlName="price"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mensaje bajo precio</mat-label>
+        <input
+          matInput
+          placeholder="Mensaje bajo precio"
+          formControlName="priceMessage"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="features-plan-container">
+      <div class="features-plan-subcontainer">
+        <span *ngFor="let feature of plan.features" class="feature-container">
+          <mat-checkbox [checked]="feature.isActive">
+            {{ feature.name }}
+          </mat-checkbox>
+          <mat-divider></mat-divider>
+        </span>
+      </div>
+      <button type="submit" mat-raised-button color="accent" class="save-btn">
+        Guardar cambios
+      </button>
+    </div>
+  </form>
+</div>

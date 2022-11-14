@@ -1,0 +1,11 @@
+<div class="container">
+  <app-bg></app-bg>
+  <div class="subcontainer">
+    <div class="sidebar">
+      <app-sidebar-menu [linksMenu]="linksMenu" css="admin"></app-sidebar-menu>
+    </div>
+    <div class="view">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

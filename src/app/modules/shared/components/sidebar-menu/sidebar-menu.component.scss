@@ -1,6 +1,5 @@
 @use '../../../../../styles.scss' as stylesRoot;
 
-
 .sidebar {
   position: fixed;
   width: 320px;
@@ -11,12 +10,12 @@
 }
 
 .logo img {
-   position: absolute;
-   left: 10.4%;
-   right: 12.49%;
-   top: 8.33%;
-   bottom: 86.11%;
-   cursor: pointer;
+  position: absolute;
+  left: 10.4%;
+  right: 12.49%;
+  top: 8.33%;
+  bottom: 86.11%;
+  cursor: pointer;
 }
 
 .menu {

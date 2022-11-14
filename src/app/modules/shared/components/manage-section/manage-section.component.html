@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="title">{{ title }}</h1>
+  <app-dashed-border css="admin-border"></app-dashed-border>
+  <div>
+    <app-add-option
+      [name]="name"
+      (addState)="getAddState($event)"
+    ></app-add-option>
+    <app-manage-option
+      *ngFor="let option of options; let index"
+      [option]="option"
+      (optionSelected)="getOption($event)"
+    ></app-manage-option>
+    <mat-divider></mat-divider>
+  </div>
+</div>

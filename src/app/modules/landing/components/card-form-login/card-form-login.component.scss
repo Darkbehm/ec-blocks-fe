@@ -1,0 +1,26 @@
+.card {
+  z-index: 100;
+  width: 800px;
+  padding: 4rem;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fields > * {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  button {
+    padding: 0;
+  }
+}

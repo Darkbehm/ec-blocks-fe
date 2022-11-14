@@ -1,0 +1,51 @@
+<div class="container">
+  <div
+    appDrag
+    (files)="fileDropped($event)"
+    class="drop-container center"
+    (click)="inputFile.click()"
+  >
+    <fa-icon
+      [icon]="faImages"
+      size="lg"
+      [styles]="{ color: '#078bd7' }"
+    ></fa-icon>
+  </div>
+  <input
+    type="file"
+    class="file"
+    (change)="selectFile($event)"
+    multiple
+    #inputFile
+  />
+
+  <div class="preview-container" *ngIf="fileList.length > 0; else empty">
+    <figure *ngFor="let file of fileList; let index" class="img-container">
+      <span class="overlay-img center">
+        <span>
+          <button class="btn-view">
+            <fa-icon
+              [icon]="faEye"
+              size="lg"
+              [styles]="{ color: '#078bd7' }"
+            ></fa-icon>
+          </button>
+          <button class="btn-delete" (click)="deleteImage(index)">
+            <fa-icon
+              [icon]="faTrash"
+              size="lg"
+              [styles]="{ color: '#078bd7' }"
+            ></fa-icon>
+          </button>
+        </span>
+      </span>
+      <img [src]="file.url" alt="img" />
+    </figure>
+  </div>
+
+  <ng-template #empty>
+    <div class="center">
+      <span class="empty-text">Todavia no has subido imagenes</span>
+    </div>
+  </ng-template>
+</div>

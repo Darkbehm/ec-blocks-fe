@@ -1,0 +1,20 @@
+<mat-divider></mat-divider>
+<div class="container">
+  <span class="name">{{ option.name }}</span>
+  <div class="actions">
+    <button
+      mat-mini-fab
+      color="white-custom"
+      class="edit"
+      [routerLink]="['edit', option.id]"
+      routerLinkActive="hide"
+      (click)="sendPlan(option)"
+    >
+      <mat-icon color="accent">edit</mat-icon>
+    </button>
+    <button mat-mini-fab color="white-custom" class="delete">
+      <mat-icon color="primary">delete</mat-icon>
+    </button>
+  </div>
+</div>
+<mat-divider></mat-divider>

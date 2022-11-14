@@ -4,38 +4,78 @@
       (click)="goHome()"
       class="button-logo hvr-wobble-vertical"
       data-replace="assets/Logo.svg"
+      [routerLink]="['']"
+      routerLinkActive="active"
     >
       <img src="assets/Logo.svg" alt="menu" />
     </div>
-    <button mat-button class="links">
+    <button
+      mat-button
+      class="links"
+      [routerLink]="['/stores']"
+      routerLinkActive="active"
+    >
       <span class="box-animation"> Ver Tiendas </span>
     </button>
   </div>
   <div class="left-content">
-    <button mat-button class="links">
+    <button
+      mat-button
+      class="links"
+      [routerLink]="['/plans']"
+      routerLinkActive="active"
+    >
       <span class="box-animation"> Precios </span>
     </button>
     <div [ngSwitch]="userType" class="navbar-switch">
       <div *ngSwitchCase="USER_TYPES.admin">
-        <button mat-raised-button color="primary" class="button-primary">
+        <button
+          mat-raised-button
+          color="primary"
+          class="button-primary"
+          [routerLink]="['/admin']"
+          routerLinkActive="active"
+        >
           Administracion
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.seller">
-        <button mat-raised-button color="primary" class="button-primary">
+        <button
+          mat-raised-button
+          color="primary"
+          class="button-primary"
+          [routerLink]="['/company']"
+          routerLinkActive="active"
+        >
           Mi tienda
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.buyer">
-        <button mat-raised-button color="primary" class="button-primary">
+        <button
+          mat-raised-button
+          color="primary"
+          class="button-primary"
+          [routerLink]="['/cart']"
+          routerLinkActive="active"
+        >
           Mi carrito
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.unknown">
-        <button mat-button class="links">
+        <button
+          mat-button
+          class="links"
+          [routerLink]="['/login']"
+          routerLinkActive="active"
+        >
           <span class="box-animation">Iniciar Sesion</span>
         </button>
-        <button mat-button class="button-primary">
+        <button
+          mat-button
+          class="button-primary"
+          [routerLink]="['/register']"
+          routerLinkActive="active"
+        >
           <span class="box-animation">Empieza gratis</span>
         </button>
       </div>
