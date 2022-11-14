@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faCss3Alt, faHtml5, faJs } from '@fortawesome/free-brands-svg-icons';
-import { faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faTimes, faWrench } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-edit-block',
@@ -12,6 +12,7 @@ export class EditBlockComponent {
   faJS = faJs;
   faCSS = faCss3Alt;
   faHTML = faHtml5;
+  faClose = faTimes;
 
   jsonCode: string = ``;
   jsCode: string = ``;
