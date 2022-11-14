@@ -1,132 +1,132 @@
 .container {
-    width: 100%;
-    height: 120px;
-    background-color: #fafffd;
-    padding: 1em;
-    display: flex;
-    column-gap: 20px;
-    border-radius: 4px;
-    filter: drop-shadow(0px 24px 38px rgba(0, 0, 0, 0.14)) drop-shadow(0px 9px 46px rgba(0, 0, 0, 0.12)) drop-shadow(0px 11px 15px rgba(0, 0, 0, 0.2));
-  }
-  
-  .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .drop-container {
-    width: 130px;
-    height: 100%;
-    border-radius: 5%;
-    transition: background-color 0.2s ease-in;
-    cursor: pointer;
-  }
-  
-  .file {
-    display: none;
-  }
-  
-  .preview-container {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 100%;
-  }
-  .img-container {
-    margin: 0;
-    position: relative;
-    width: 100%;
-    padding: 4px;
-  }
-  
-  .img-container img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  
-  .overlay-img {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fafffd00;
-    transition: background-color 0.3s ease-in;
-  }
-  
-  .img-container:hover .overlay-img {
-    background-color: rgba(250, 255, 253, 0.5);
-  }
-  
-  .btn-delete,
-  .btn-view {
-    border: 0;
-    cursor: pointer;
-    padding: 0 0.7em;
-    background-color: rgba(250, 255, 253, 0);
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-  }
-  
-  .img-container:hover .btn-delete,
-  .img-container:hover .btn-view {
-    opacity: 1;
-  }
-  
-  .title-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  width: 100%;
+  height: 120px;
+  background-color: #fafffd;
+  padding: 1em;
+  display: flex;
+  column-gap: 20px;
+  border-radius: 4px;
+  filter: drop-shadow(0px 24px 38px rgba(0, 0, 0, 0.14))
+    drop-shadow(0px 9px 46px rgba(0, 0, 0, 0.12))
+    drop-shadow(0px 11px 15px rgba(0, 0, 0, 0.2));
+}
 
-  h4 {
-    margin: 0;
-    margin-bottom: 1em;
-  }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .color-078bd7 {
-    border: 2px dashed #078bd7;
-  }
+.drop-container {
+  width: 130px;
+  height: 100%;
+  border-radius: 5%;
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+}
 
-  .color-FFA630 {
-    border: 2px dashed #FFA630;
-  }
+.file {
+  display: none;
+}
 
-  .color-078bd7:hover {
-    background-color: #078bd750;
-  }
+.preview-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
+}
+.img-container {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  padding: 4px;
+}
 
-  .color-FFA630:hover {
-    background-color: #FFA63050;
-  }
+.img-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
 
-  .alt-file {
-    background-color: #000000;
-    width: 100%;
-    height: 100%;
-    border-radius: 5%;
-  }
+.overlay-img {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafffd00;
+  transition: background-color 0.3s ease-in;
+}
 
+.img-container:hover .overlay-img {
+  background-color: rgba(250, 255, 253, 0.5);
+}
 
+.btn-delete,
+.btn-view {
+  border: 0;
+  cursor: pointer;
+  padding: 0 0.7em;
+  background-color: rgba(250, 255, 253, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
 
-  .file-name {
-    display: block;
-    text-align: center;
-    font-size: 8px;
-    font-weight: 500;
-    color: #FFA630;
-    white-space: nowrap;
-    width: 90px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
+.img-container:hover .btn-delete,
+.img-container:hover .btn-view {
+  opacity: 1;
+}
 
-  .alt-file-container {
-    text-align: center;
-  }
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h4 {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
+.color-078bd7 {
+  border: 2px dashed #078bd7;
+}
+
+.color-FFA630 {
+  border: 2px dashed #ffa630;
+}
+
+.color-078bd7:hover {
+  background-color: #078bd750;
+}
+
+.color-FFA630:hover {
+  background-color: #ffa63050;
+}
+
+.alt-file {
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+}
+
+.file-name {
+  display: block;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 500;
+  color: #ffa630;
+  white-space: nowrap;
+  width: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.alt-file-container {
+  text-align: center;
+}

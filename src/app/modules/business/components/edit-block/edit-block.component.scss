@@ -1,59 +1,57 @@
 @use '../../../../../styles.scss' as stylesRoot;
 
 .container-modal-block {
-    background: linear-gradient(180deg, #FAFFFD 0%, #FFA630 99.99%, #FFA630 100%);
-    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
-    padding: 2em 3em;
+  background: linear-gradient(180deg, #fafffd 0%, #ffa630 99.99%, #ffa630 100%);
+  box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
+    0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+  padding: 2em 3em;
 }
 
 h2 {
-    margin: 0;
+  margin: 0;
 }
 
 .fields-modal-container {
-    width: 70%;
+  width: 70%;
 }
 
 mat-form-field {
-    width: 50%;
+  width: 50%;
 }
 
 .header-modal-edit {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .close-container {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 mat-dialog-actions {
-    margin: 0;
+  margin: 0;
 }
-
 
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    color: stylesRoot.$white-custom;
-    background-color: stylesRoot.$accent;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    height: 60px;
+  color: stylesRoot.$white-custom;
+  background-color: stylesRoot.$accent;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 60px;
 }
 
-
-
 .editor {
-    background-color: #2D2D2D;
-    height: 300px;
-    overflow: auto;
+  background-color: #2d2d2d;
+  height: 300px;
+  overflow: auto;
 }
 
 .tab {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 button {
-    box-shadow: stylesRoot.$shadow;
-    font-size: .9em;
+  box-shadow: stylesRoot.$shadow;
+  font-size: 0.9em;
 }

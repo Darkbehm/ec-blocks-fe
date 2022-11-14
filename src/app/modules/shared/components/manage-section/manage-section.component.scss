@@ -1,14 +1,13 @@
 @use '../../../../../styles.scss' as stylesRoot;
 
 .container {
-    width: 320px;
-    height: 100vh;
-    min-height: 100vh;
-    overflow: auto;
-    background-color: stylesRoot.$white-custom;
-    padding: 54px 40px;
-    left: 640px;
-
+  width: 320px;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: stylesRoot.$white-custom;
+  padding: 54px 40px;
+  left: 640px;
 }
 
 mat-divider {
