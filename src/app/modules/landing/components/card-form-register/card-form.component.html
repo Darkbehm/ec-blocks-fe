@@ -1,0 +1,68 @@
+<mat-card class="card">
+  <form [formGroup]="registerForm">
+    <div class="container">
+      <div class="fields">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre" formControlName="name" />
+        </mat-form-field>
+      </div>
+      <div class="fields">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Correo Electronico</mat-label>
+          <input
+            type="email"
+            matInput
+            placeholder="Correo Electronico"
+            formControlName="email"
+          />
+        </mat-form-field>
+      </div>
+      <div class="fields">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Contraseña</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="Contraseña"
+            formControlName="password"
+          />
+        </mat-form-field>
+      </div>
+      <div class="fields">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Confirma tu contraseña</mat-label>
+          <input
+            type="password"
+            matInput
+            placeholder="Confirma tu contraseña"
+            formControlName="confirmPassword"
+          />
+        </mat-form-field>
+      </div>
+      <div class="fields">
+        <mat-checkbox>
+          Acepto los
+          <a mat-button [routerLink]="['/tos']"> Terminos y condiciones</a>
+          y la
+          <a mat-button [routerLink]="['/privacy']"> Politica de privacidad</a>
+        </mat-checkbox>
+        <mat-checkbox> Registrar unicamente como comprador. </mat-checkbox>
+      </div>
+
+      <div class="buttons">
+        <button mat-button color="accent" routerLink="/login">
+          <span class="box-animation">Iniciar Sesion</span>
+        </button>
+        <button
+          type="submit"
+          mat-raised-button
+          color="primary"
+          class="save-btn"
+        >
+          <span class="box-animation">Registrarse</span>
+        </button>
+      </div>
+    </div>
+  </form>
+</mat-card>

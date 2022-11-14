@@ -66,6 +66,71 @@ body {
 .fira-code {
   font-family: 'Fira Code', monospace;
 }
+.dotted-primary {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: calc($margin-left * 2);
+  background-image: repeating-linear-gradient(
+      180deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    );
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.dotted-accent {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: auto;
+  background-image: repeating-linear-gradient(
+      180deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    );
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
 
 // animations
 /* Wobble Vertical */

@@ -16,6 +16,11 @@ const routes: Routes = [
         (m) => m.AdminRoutingModule,
       ),
   },
+  {
+    //everything else
+    path: '**',
+    redirectTo: '',
+  },
 ];
 
 @NgModule({
