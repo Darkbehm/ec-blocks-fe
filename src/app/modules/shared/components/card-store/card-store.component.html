@@ -1,18 +1,20 @@
-<mat-card class="card">
-  <mat-card-title class="padded header-card">
-    <img [src]="store.logo" [alt]="store.name" class="logo" />
-    <div class="mat-body-2">{{ store.name }}</div>
-  </mat-card-title>
-  <mat-card-content>
-    <div
-      [style.background-image]="'url(' + store.bgImage + ')'"
-      class="bg-image"
-    ></div>
-    <p class="mat-body-1 padded">{{ store.description }}</p>
-  </mat-card-content>
-  <mat-card-actions class="actions padded">
-    <a mat-button color="accent" class="mat-body-2 italic-font">
-      Ver más<span class="fira-code">-></span>
-    </a>
-  </mat-card-actions>
-</mat-card>
+<div class="container">
+  <mat-card class="card">
+    <mat-card-title class="padded header-card">
+      <img [src]="store.logo" [alt]="store.name" class="logo" />
+      <div class="mat-body-2">{{ store.name }}</div>
+    </mat-card-title>
+    <mat-card-content>
+      <div
+        [style.background-image]="'url(' + store.bgImage + ')'"
+        class="bg-image"
+      ></div>
+      <p class="mat-body-1 padded">{{ store.description }}</p>
+    </mat-card-content>
+    <mat-card-actions class="actions padded">
+      <a mat-button color="accent" class="mat-body-2 italic-font">
+        Ver más<span class="fira-code">-></span>
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,40 @@
+@use '../../../../../styles.scss' as root;
+
+main {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 115, 179, 0) 0%,
+    root.$accent 100%
+  );
+}
+
+.container {
+  display: grid;
+  margin: 10vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 3.75rem;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 2vh 25vh 0 25vh;
+  h3 {
+    justify-self: center;
+  }
+  .filter {
+    margin: 0 1rem;
+  }
+}
+
+.↑ {
+  position: fixed;
+  bottom: 40vh;
+  right: 2rem;
+}
