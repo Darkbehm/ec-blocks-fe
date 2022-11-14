@@ -1,0 +1,42 @@
+<div class="stores">
+  <app-navbar></app-navbar>
+  <main>
+    <div class="filters">
+      <mat-form-field name="search">
+        <mat-label>Buscar</mat-label>
+        <input matInput />
+        <mat-icon matPrefix>search</mat-icon>
+      </mat-form-field>
+      <h3 class="italic-font">Tiendas</h3>
+      <div>
+        <mat-form-field name="Order" class="filter">
+          <mat-label>Ordenar por</mat-label>
+          <mat-select>
+            <mat-option value="option1">Fecha reciente</mat-option>
+            <mat-option value="option2">Fecha antigua</mat-option>
+            <mat-option value="option3">Nombre</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field name="Filter" class="filter">
+          <mat-label>Buscar por</mat-label>
+          <mat-select multiple>
+            <mat-option value="option1">Nombre</mat-option>
+            <mat-option value="option2">Descripcion</mat-option>
+            <mat-option value="option3">Etiquetas</mat-option>
+            <mat-option value="option3">Categorias</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="container">
+      <app-card-store
+        *ngFor="let store of stores"
+        [store]="store"
+      ></app-card-store>
+    </div>
+    <a mat-button color="primary" class="mat-body-2 ↑" (click)="scrollToTop()">
+      <span class="fira-code">↑</span>
+    </a>
+    <app-footer></app-footer>
+  </main>
+</div>

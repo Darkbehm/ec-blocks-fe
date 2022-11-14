@@ -3,7 +3,7 @@
 .sidebar {
   position: fixed;
   width: 320px;
-  height: 900px;
+  height: 100vh;
   left: 0px;
   top: 0px;
   background-color: #000000;
@@ -19,9 +19,11 @@
 }
 
 .menu {
-  width: 100%;
-  position: absolute;
-  top: 21.44%;
+  width: 320px;
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: 0px;
 }
 
 // app-link-menu {

@@ -1,0 +1,134 @@
+<!-- <div class="dropzone">
+  <app-drop-zone [max]="1" fileType="image" color="#FFA630"></app-drop-zone>
+</div> -->
+<div class="view-cfg">
+  <form [formGroup]="configurationForm">
+    <div class="fields-form-cfg">
+      <div class="fields">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Titulo general del sitio</mat-label>
+          <input
+            matInput
+            placeholder="Titulo general del sitio"
+            formControlName="title"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Descripcion del sitio</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="assets">
+        <span class="dropzone">
+          <h4>FavIcon</h4>
+          <app-drop-zone
+            [max]="1"
+            fileType="image"
+            color="#FFA630"
+          ></app-drop-zone
+        ></span>
+        <span class="dropzone">
+          <h4>Logotipo</h4>
+          <app-drop-zone
+            [max]="1"
+            fileType="image"
+            color="#FFA630"
+          ></app-drop-zone>
+        </span>
+      </div>
+
+      <div class="keywords">
+        <mat-form-field class="example-chip-list" appearance="fill">
+          <mat-label>Palabras clave</mat-label>
+          <mat-chip-list #chipList aria-label="Fruit selection">
+            <mat-chip
+              *ngFor="let keyword of keywords"
+              (removed)="remove(keyword)"
+            >
+              {{ keyword }}
+              <button matChipRemove>
+                <mat-icon>cancel</mat-icon>
+              </button>
+            </mat-chip>
+            <input
+              placeholder="Nueva entrada...."
+              [matChipInputFor]="chipList"
+              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+              [matChipInputAddOnBlur]="addOnBlur"
+              (matChipInputTokenEnd)="add($event)"
+            />
+          </mat-chip-list>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="editor">
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          class="editor"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> CSS editor </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-code-editor
+            language="css"
+            [code]="cssCode"
+            (getCode)="getCSSCode($event)"
+          ></app-code-editor>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <div class="file-form-cfg">
+      <div class="files-drag-drop">
+        <app-drag-drop-file
+          fileType="image"
+          color="#FFA630"
+          [max]="4"
+        ></app-drag-drop-file>
+      </div>
+      <div class="files-drag-drop">
+        <app-drag-drop-file
+          fileType="video"
+          color="#FFA630"
+          [max]="4"
+        ></app-drag-drop-file>
+      </div>
+      <div class="files-drag-drop">
+        <app-drag-drop-file
+          fileType="other"
+          color="#FFA630"
+          [max]="4"
+        ></app-drag-drop-file>
+      </div>
+    </div>
+
+    <div class="editor">
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+          class="editor"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> JS editor </mat-panel-title>
+          </mat-expansion-panel-header>
+          <app-code-editor
+            language="js"
+            [code]="jsCode"
+            (getCode)="getJSCode($event)"
+          ></app-code-editor>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+    <span class="save-action">
+      <button type="submit" mat-raised-button color="accent" class="save-btn">
+        Guardar cambios
+      </button>
+    </span>
+  </form>
+</div>

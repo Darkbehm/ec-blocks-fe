@@ -19,6 +19,11 @@
 .view {
   height: 100vh;
   width: calc(100% - 320px);
+  // padding: 54px 40px 54px;
+  overflow-y: scroll;
+  z-index: 1;
+  height: 100vh;
+  width: calc(100% - 320px);
   padding: 54px 40px;
   overflow-y: scroll;
   z-index: 1;

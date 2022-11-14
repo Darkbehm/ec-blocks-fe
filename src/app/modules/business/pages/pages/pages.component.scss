@@ -1,0 +1,16 @@
+@use '../../../../../styles.scss' as stylesRoot;
+
+.options {
+  position: absolute;
+  left: 320px;
+  z-index: 2;
+}
+
+.container-manage-page {
+  position: absolute;
+  padding: 2em;
+  width: calc(100% - 640px);
+  height: 100%;
+  overflow: auto;
+  left: 640px;
+}

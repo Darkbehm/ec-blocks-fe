@@ -1,0 +1,52 @@
+@use '../../../../../styles.scss' as stylesRoot;
+
+.view-form-p {
+  position: absolute;
+  width: calc(100% - 640px - 232px);
+  left: 872px;
+  height: 100vh;
+  padding: 0 3em;
+  display: flex;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.options {
+  position: absolute;
+  left: 552px;
+  z-index: 2;
+}
+form {
+  width: 100%;
+}
+
+mat-form-field {
+  width: 100%;
+  font-weight: 500;
+  border-color: #000000;
+  font-size: 15px;
+}
+
+.price-input {
+  width: 20%;
+}
+
+.product-footer-form-container {
+  margin-top: 2em;
+}
+
+.product-footer-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.save-btn {
+  font-size: 14px;
+  width: 200px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.select {
+  background-color: stylesRoot.$white-custom;
+}

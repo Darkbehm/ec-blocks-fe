@@ -1,0 +1,64 @@
+<div class="options">
+  <app-manage-section
+    title="Productos"
+    name="Nuevo producto"
+    [options]="products"
+    css="business"
+    (optionSelected)="getOptionSelected($event)"
+    (addState)="getAddState($event)"
+  ></app-manage-section>
+</div>
+
+<div class="view-form-p">
+  <form [formGroup]="productForm">
+    <div class="form-fields">
+      <mat-form-field appearance="outline" color="black">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          placeholder="Nombre del producto"
+          formControlName="name"
+        />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Descripcion del producto</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="images-container">
+      <app-drag-drop-file
+        [max]="4"
+        fileType="image"
+        color="#FFA630"
+      ></app-drag-drop-file>
+    </div>
+
+    <div class="product-footer-form-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Selecciona una categoria</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="product-footer-form">
+        <mat-form-field appearance="outline" color="black" class="price-input">
+          <mat-label>Precio</mat-label>
+          <input
+            matInput
+            placeholder="Precio del producto"
+            formControlName="price"
+          />
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="accent" class="save-btn">
+          Guardar cambios
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
