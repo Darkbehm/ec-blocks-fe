@@ -3,11 +3,28 @@ $accent: #078bd7;
 $primary: #ffa630;
 $white-custom: #fafffd;
 $black: #000000;
-$shadow: 0px 24px 38px rgba(0, 0, 0, 0.14),
-0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+$shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12),
+  0px 11px 15px rgba(0, 0, 0, 0.2);
 
-*, *::before, *::after {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 1rem;
+  border-radius: 0.5rem;
+  border: 0.25rem solid transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  box-shadow: inset $accent 0 0 0 0.25rem;
+}
+*::-webkit-scrollbar {
+  background-color: $black;
+  border-radius: 0;
 }
 
 .italic-font {
@@ -23,6 +40,14 @@ $margin-left: 10vw;
   left: 0.25rem;
   z-index: -1;
   color: $white-custom;
+}
+.back-accent::before {
+  content: attr(back);
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  z-index: -1;
+  color: $accent;
 }
 
 body {
@@ -41,61 +66,125 @@ body {
 .fira-code {
   font-family: 'Fira Code', monospace;
 }
+.dotted-primary {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: calc($margin-left * 2);
+  background-image: repeating-linear-gradient(
+      180deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $primary,
+      $primary 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $primary 1.25rem
+    );
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.dotted-accent {
+  width: 52rem;
+  height: 0.3rem;
+  margin-left: auto;
+  background-image: repeating-linear-gradient(
+      180deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      270deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    ),
+    repeating-linear-gradient(
+      0deg,
+      $accent,
+      $accent 0.625rem,
+      transparent 0.625rem,
+      transparent 1.25rem,
+      $accent 1.25rem
+    );
+  background-size: 5px 100%, 100% 5px, 5px 100%, 100% 5px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat;
+}
 
 // animations
 /* Wobble Vertical */
 @keyframes animation-vertical {
-	16.65% {
-		transform: translateY(8px);
-	}
-	33.3% {
-		transform: translateY(-6px);
-	}
-	49.95% {
-		transform: translateY(4px);
-	}
-	66.6% {
-		transform: translateY(-2px);
-	}
-	83.25% {
-		transform: translateY(1px);
-	}
-	100% {
-		transform: translateY(0);
-	}
+  16.65% {
+    transform: translateY(8px);
+  }
+  33.3% {
+    transform: translateY(-6px);
+  }
+  49.95% {
+    transform: translateY(4px);
+  }
+  66.6% {
+    transform: translateY(-2px);
+  }
+  83.25% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 //Code Editors
 // @import "~prismjs/themes/prism-okaidia";
-@import "~prismjs/themes/prism-tomorrow";
+@import 'node_modules/prismjs/themes/prism-tomorrow';
 // @import "~prismjs/themes/prism-solarizedlight";
 // @import "~prismjs/themes/prism";
 
-
 .line-numbers .line-numbers-rows {
-	position: absolute;
-	pointer-events: none;
-	top: 15px;
-	font-size: 100%;
-	left: 0;
-	width: 3em;
-	letter-spacing: -1px;
-	border-right: 1px solid rgb(179, 179, 179);
-	user-select: none;
-  }
-  
-  .line-numbers-rows > span {
-	display: block;
-	counter-increment: linenumber;
-  }
-  
-  .line-numbers-rows > span:before {
-	content: counter(linenumber);
-	color: rgb(219, 219, 219);
-	display: block;
-	padding-right: 0.8em;
-	text-align: right;
-  }
+  position: absolute;
+  pointer-events: none;
+  top: 15px;
+  font-size: 100%;
+  left: 0;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid rgb(179, 179, 179);
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: rgb(219, 219, 219);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
 
 .custom-dialog-container .mat-dialog-container {
 	padding: 0;
@@ -103,7 +192,7 @@ body {
 .box-animation {
   height: 36px;
   float: left;
-  transition: .5s linear;
+  transition: 0.5s linear;
   position: relative;
   display: block;
   overflow: hidden;
@@ -149,12 +238,12 @@ body {
   border-color: #262626;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .3s;
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
 }
 
 .box-animation:hover:after {
   border-color: #262626;
   height: 100%;
   transform: translateX(0);
-  transition: .3s transform linear, .3s height linear .5s;
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
 }

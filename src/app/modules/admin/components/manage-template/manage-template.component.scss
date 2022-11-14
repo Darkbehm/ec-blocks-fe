@@ -1,33 +1,32 @@
 @use '../../../../../styles.scss' as stylesRoot;
 
 .container {
-    position: absolute;
-    top: 0;
-    left: 640px;
-    padding: 2em;
-    width: calc(100% - 640px);
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 2fr;
-    overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 640px;
+  padding: 2em;
+  width: calc(100% - 640px);
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr;
+  overflow: auto;
 }
 
-
 .options {
-    position: absolute;
-    left: 320px;
-    z-index: 2;
+  position: absolute;
+  left: 320px;
+  z-index: 2;
 }
 
 .view {
-    position: absolute;
-    top: 0;
-    width: calc(100% - 640px);
-    left: 640px;
-    height: 100%;
-    z-index: 1;
-    overflow: auto;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 640px);
+  left: 640px;
+  height: 100%;
+  z-index: 1;
+  overflow: auto;
 }
 
 .images-container {
@@ -43,26 +42,26 @@ h5 {
 }
 
 form {
-    padding: 2em;
-    height: 100%;
-    display: flex;
+  padding: 2em;
+  height: 100%;
+  display: flex;
 }
 
-.fields-plan{
-    height: 100%;
-    width: 100%;
-    padding: 1em 0.5em 1em 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.fields-plan {
+  height: 100%;
+  width: 100%;
+  padding: 1em 0.5em 1em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 mat-form-field {
-    width: 100%;
-    font-weight: 500;
-    border-color: #000000;
-    font-size: 15px;
+  width: 100%;
+  font-weight: 500;
+  border-color: #000000;
+  font-size: 15px;
 }
 
 .save-btn {
@@ -75,17 +74,16 @@ mat-form-field {
 }
 
 .editors {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1em;
-    grid-column: 1/3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  grid-column: 1/3;
 }
 
 mat-expansion-panel {
-    background-color: stylesRoot.$white-custom;
+  background-color: stylesRoot.$white-custom;
 }
 
 .editor {
     box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
 }
-

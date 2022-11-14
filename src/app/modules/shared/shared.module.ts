@@ -13,6 +13,7 @@ import { DragDirective } from './directives/drag.directive';
 import { DragDropFileComponent } from './components/drag-drop-file/drag-drop-file.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CodeEditorComponent } from './components/code-editor/code-editor.component';
+import { CardStoreComponent } from './components/card-store/card-store.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
 
@@ -29,6 +30,7 @@ import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
     DragDropFileComponent,
     CodeEditorComponent,
     DropZoneComponent,
+    CardStoreComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +52,7 @@ import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
     DragDropFileComponent,
     CodeEditorComponent,
     DropZoneComponent,
+    CardStoreComponent,
   ],
 })
 export class SharedModule {}
