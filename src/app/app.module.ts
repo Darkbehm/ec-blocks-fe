@@ -13,13 +13,13 @@ import { BackgroundComponent } from './modules/landing/components/background/bac
 import { SharedModule } from './modules/shared/shared.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { BusinessModule } from './modules/business/business.module';
-
 import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
 import { FooterComponent } from './modules/landing/components/footer/footer.component';
 import { RegisterComponent } from './modules/landing/pages/register/register.component';
 import { CardFormComponent } from './modules/landing/components/card-form-register/card-form.component';
 import { LoginComponent } from './modules/landing/pages/login/login.component';
 import { CardFormLoginComponent } from './modules/landing/components/card-form-login/card-form-login.component';
+import { StoresLandingComponent } from './modules/landing/pages/stores-landing/stores-landing.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +32,7 @@ import { CardFormLoginComponent } from './modules/landing/components/card-form-l
     CardFormComponent,
     LoginComponent,
     CardFormLoginComponent,
+    StoresLandingComponent,
   ],
   imports: [
     BrowserModule,
