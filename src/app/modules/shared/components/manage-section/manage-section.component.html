@@ -1,6 +1,6 @@
 <div class="container">
   <h1 class="title">{{ title }}</h1>
-  <app-dashed-border css="admin-border"></app-dashed-border>
+  <app-dashed-border [css]="css + '-border'"></app-dashed-border>
   <div>
     <app-add-option
       [name]="name"

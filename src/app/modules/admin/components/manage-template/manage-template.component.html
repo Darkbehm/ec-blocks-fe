@@ -13,11 +13,15 @@
     <div class="fields-plan">
       <mat-form-field appearance="outline" color="black">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Nombre del plan" formControlName="name" />
+        <input
+          matInput
+          placeholder="Nombre de la plantilla"
+          formControlName="name"
+        />
       </mat-form-field>
 
       <mat-form-field appearance="outline">
-        <mat-label>Descripcion del plan</mat-label>
+        <mat-label>Descripcion de la plantilla</mat-label>
         <textarea matInput formControlName="description"></textarea>
       </mat-form-field>
 
@@ -27,7 +31,11 @@
                 </mat-form-field> -->
     </div>
     <div class="images-container">
-      <app-drag-drop-file></app-drag-drop-file>
+      <app-drag-drop-file
+        [max]="3"
+        fileType="image"
+        color="#078bd7"
+      ></app-drag-drop-file>
     </div>
 
     <div class="editors">
@@ -35,6 +43,7 @@
         <mat-expansion-panel
           (opened)="panelOpenState = true"
           (closed)="panelOpenState = false"
+          class="editor"
         >
           <mat-expansion-panel-header>
             <mat-panel-title> CSS editor </mat-panel-title>
@@ -51,6 +60,7 @@
         <mat-expansion-panel
           (opened)="panelOpenState = true"
           (closed)="panelOpenState = false"
+          class="editor"
         >
           <mat-expansion-panel-header>
             <mat-panel-title> JS editor </mat-panel-title>

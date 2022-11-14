@@ -1,0 +1,55 @@
+form {
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr) 35px;
+    gap: 2em;
+    overflow: auto;
+}
+
+.fields-form-cfg {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.assets {
+    width: 100%;
+    display: flex;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.dropzone {
+    width: 35%;
+}
+
+mat-form-field {
+    width: 100%;
+    font-weight: 500;
+}
+
+.file-form-cfg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.files-drag-drop {
+
+    margin-bottom: 1em;
+}
+
+.save-action {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.save-btn {
+    font-size: 14px;
+    width: 200px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}

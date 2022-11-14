@@ -19,7 +19,11 @@ mat-divider {
 }
 
 .name {
-  font-weight: 500;
+    display: block;
+    font-weight: 500;
+    overflow: hidden;
+    width: 100px;
+    text-overflow: ellipsis;
 }
 
 .actions {

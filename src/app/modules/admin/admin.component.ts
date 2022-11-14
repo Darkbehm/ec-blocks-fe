@@ -21,12 +21,12 @@ export class AdminComponent {
     {
       name: 'Plantillas',
       icon: 'web',
-      route: '/admin/templates',
+      route: '/admin/templates/create',
     },
     {
       name: 'Planes',
       icon: 'sell',
-      route: '/admin/plans',
+      route: '/admin/plans/create',
     },
   ];
 }

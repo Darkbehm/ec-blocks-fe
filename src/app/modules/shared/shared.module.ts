@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CodeEditorComponent } from './components/code-editor/code-editor.component';
 import { CardStoreComponent } from './components/card-store/card-store.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
 
 @NgModule({
   exports: [
@@ -28,6 +29,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    DropZoneComponent,
     CardStoreComponent,
   ],
   imports: [
@@ -49,6 +51,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DragDirective,
     DragDropFileComponent,
     CodeEditorComponent,
+    DropZoneComponent,
     CardStoreComponent,
   ],
 })

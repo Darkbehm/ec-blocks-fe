@@ -12,6 +12,8 @@ import { HomeComponent } from './modules/landing/pages/home/home.component';
 import { BackgroundComponent } from './modules/landing/components/background/background.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { AdminModule } from './modules/admin/admin.module';
+import { BusinessModule } from './modules/business/business.module';
+
 import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
 import { FooterComponent } from './modules/landing/components/footer/footer.component';
 import { RegisterComponent } from './modules/landing/pages/register/register.component';
@@ -39,6 +41,7 @@ import { CardFormLoginComponent } from './modules/landing/components/card-form-l
     FontAwesomeModule,
     SharedModule,
     AdminModule,
+    BusinessModule,
     ReactiveFormsModule,
   ],
   providers: [],

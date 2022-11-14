@@ -1,0 +1,79 @@
+<section class="container-modal-block">
+  <form>
+    <div class="header-modal-edit">
+      <div class="fields-modal-container">
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Nombre del bloque</mat-label>
+          <input matInput placeholder="Nombre del bloque" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="black">
+          <mat-label>Color</mat-label>
+          <input matInput placeholder="Color" />
+          <mat-icon matSuffix color="primary">palette</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <span class="close-container" mat-dialog-close>
+        <fa-icon [icon]="faClose" size="2x" class="close"></fa-icon>
+      </span>
+    </div>
+
+    <mat-tab-group [disablePagination]="true" [disableRipple]="true">
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab">
+            <fa-icon [icon]="faWrench"></fa-icon>
+            Components
+          </span>
+        </ng-template>
+        <div class="editor">
+          <app-code-editor language="json" [code]="jsonCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab">
+            <fa-icon [icon]="faJS"></fa-icon>
+            Javascript
+          </span>
+        </ng-template>
+        <div class="editor">
+          <app-code-editor language="js" [code]="jsCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab">
+            <fa-icon [icon]="faCSS"></fa-icon>
+            CSS
+          </span>
+        </ng-template>
+
+        <div class="editor">
+          <app-code-editor language="css" [code]="cssCode"></app-code-editor>
+        </div>
+      </mat-tab>
+
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span class="tab">
+            <fa-icon [icon]="faHTML"></fa-icon>
+            HTML
+          </span>
+        </ng-template>
+
+        <div class="editor">
+          <app-code-editor language="html" [code]="htmlCode"></app-code-editor>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <mat-dialog-actions align="end">
+      <button type="submit" mat-raised-button color="accent" class="save-btn">
+        Guardar Cambios
+      </button>
+    </mat-dialog-actions>
+  </form>
+</section>

@@ -1,0 +1,14 @@
+<div class="options">
+  <app-manage-section
+    title="Paginas"
+    name="Nueva pagina"
+    [options]="pages"
+    css="business"
+    (optionSelected)="getOptionSelected($event)"
+    (addState)="getAddState($event)"
+  ></app-manage-section>
+</div>
+
+<div class="container-manage-page" *ngIf="!isDefaultRoute">
+  <app-manage-pages [addState]="addMode" [page]="page"></app-manage-pages>
+</div>

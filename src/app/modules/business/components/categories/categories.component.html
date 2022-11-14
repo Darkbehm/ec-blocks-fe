@@ -1,0 +1,27 @@
+<div class="options">
+  <app-manage-section
+    title="Categorias"
+    name="Nueva categoria"
+    [options]="categories"
+    css="business"
+    (optionSelected)="getOptionSelected($event)"
+    (addState)="getAddState($event)"
+  ></app-manage-section>
+</div>
+
+<div class="view-form-c">
+  <form [formGroup]="categoryForm">
+    <mat-form-field appearance="outline" color="black">
+      <mat-label>Nombre</mat-label>
+      <input
+        matInput
+        placeholder="Nombre de la categoria"
+        formControlName="name"
+      />
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="accent" class="save-btn">
+      Guardar cambios
+    </button>
+  </form>
+</div>

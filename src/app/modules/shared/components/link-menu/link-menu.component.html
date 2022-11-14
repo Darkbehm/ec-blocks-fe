@@ -1,4 +1,12 @@
-<li [class]="css" [routerLink]="[linkMenu.route]" routerLinkActive="active">
-  <mat-icon [fontIcon]="linkMenu.icon" routerLinkActive="active"></mat-icon>
+<li
+  [class]="css"
+  [routerLink]="[linkMenu.route]"
+  [routerLinkActive]="'active-' + css"
+>
+  <mat-icon
+    [class]="css + '-icon'"
+    [fontIcon]="linkMenu.icon"
+    [routerLinkActive]="'active-' + css"
+  ></mat-icon>
   {{ linkMenu.name }}
 </li>

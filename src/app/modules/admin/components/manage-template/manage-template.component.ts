@@ -61,7 +61,7 @@ export class ManageTemplateComponent implements OnInit {
     description: [''],
   });
 
-  async getOptionSelected({ id, cssCode, jsCode, ...rest }: Template) {
+  async getOptionSelected({ id, cssCode, jsCode, ...rest }: any) {
     this.addMode = false;
 
     this.template = { id, ...rest };
