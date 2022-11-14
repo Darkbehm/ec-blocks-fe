@@ -4,7 +4,7 @@
   position: absolute;
   top: 0;
   left: 640px;
-  padding: 2em;
+  padding: 6rem 2em;
   width: calc(100% - 640px);
   height: 100%;
   display: grid;
@@ -57,7 +57,7 @@ form {
   align-items: center;
 }
 
-mat-form-field {
+.mat-form-field {
   width: 100%;
   font-weight: 500;
   border-color: #000000;
@@ -80,7 +80,7 @@ mat-form-field {
   grid-column: 1/3;
 }
 
-mat-expansion-panel {
+.mat-expansion-panel {
   background-color: stylesRoot.$white-custom;
 }
 

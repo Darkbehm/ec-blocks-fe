@@ -4,9 +4,12 @@ form {
   padding: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr) 35px;
+  grid-template-rows: 1fr 0.75fr 35px;
   gap: 2em;
   overflow: auto;
+}
+.view-cfg {
+  padding: 5vh 0 0 0;
 }
 
 .fields-form-cfg {
