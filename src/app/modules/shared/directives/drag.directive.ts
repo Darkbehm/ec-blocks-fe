@@ -7,7 +7,7 @@ import {
   Output,
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { FileHandle } from '../interfaces/file-handle.interface';
+import { FileHandle } from '../../../core/interfaces/file-handle.interface';
 
 @Directive({
   selector: '[appDrag]',

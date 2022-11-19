@@ -1,8 +1,8 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Plan } from '../../../admin/interfaces/plan.interface';
-import { Template } from '../../../admin/interfaces/template.interface';
-import { Product } from '../../../business/interfaces/product.interface';
-import { Category } from '../../../business/interfaces/category.interface';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Category } from 'src/app/core/interfaces/category.interface';
+import { Plan } from 'src/app/core/interfaces/plan.interface';
+import { Product } from 'src/app/core/interfaces/product.interface';
+import { Template } from 'src/app/core/interfaces/template.interface';
 
 @Component({
   selector: 'app-manage-option',

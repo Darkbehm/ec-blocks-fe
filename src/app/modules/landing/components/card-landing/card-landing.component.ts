@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faClone } from '@fortawesome/free-solid-svg-icons';
-import Feature from '../../models/feature.model';
+import { FeatureCard } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-card-landing',
@@ -8,7 +8,7 @@ import Feature from '../../models/feature.model';
   styleUrls: ['./card-landing.component.scss'],
 })
 export class CardLandingComponent implements OnInit {
-  @Input() feature: Feature = {
+  @Input() feature: FeatureCard = {
     title: 'Feature 1',
     description: 'Description 1',
     icon: faClone,

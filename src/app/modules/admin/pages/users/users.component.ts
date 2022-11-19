@@ -1,14 +1,14 @@
-import { Component, ViewChild } from '@angular/core';
-import { User } from '../../interfaces/user.interface';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { User } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.scss'],
 })
-export class UsersComponent {
+export class UsersComponent implements AfterViewInit {
   displayedColumns: string[] = ['id', 'name', 'joined', 'actions'];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

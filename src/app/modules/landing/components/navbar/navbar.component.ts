@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { USER_TYPES } from '../../models/user.model';
+import { USER_TYPES } from 'src/app/core/enums';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +8,7 @@ import { USER_TYPES } from '../../models/user.model';
 })
 export class NavbarComponent implements OnInit {
   public USER_TYPES: typeof USER_TYPES = USER_TYPES;
-  userType = USER_TYPES.unknown;
+  userType = USER_TYPES.seller;
   constructor() {}
 
   goHome() {

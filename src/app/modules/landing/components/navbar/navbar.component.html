@@ -36,7 +36,7 @@
           [routerLink]="['/admin']"
           routerLinkActive="active"
         >
-          Administracion
+          <span class="box-animation">Administracion</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.seller">
@@ -47,7 +47,7 @@
           [routerLink]="['/company']"
           routerLinkActive="active"
         >
-          Mi tienda
+          <span class="box-animation">Mi tienda</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.buyer">
@@ -58,7 +58,7 @@
           [routerLink]="['/cart']"
           routerLinkActive="active"
         >
-          Mi carrito
+          <span class="box-animation">Mi carrito</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.unknown">

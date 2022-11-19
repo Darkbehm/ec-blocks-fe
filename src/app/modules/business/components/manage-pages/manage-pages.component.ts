@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
-import { Page } from '../../interfaces/page.interface';
+import { Page } from 'src/app/core/interfaces';
 import { EditBlockComponent } from '../edit-block/edit-block.component';
 
 @Component({

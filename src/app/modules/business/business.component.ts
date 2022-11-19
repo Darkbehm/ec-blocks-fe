@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LinkMenu } from '../shared/interfaces/link-menu.interface';
+import { LinkMenu } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-business',

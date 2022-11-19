@@ -6,7 +6,7 @@ import {
   faTrash,
   faEye,
 } from '@fortawesome/free-solid-svg-icons';
-import { FileHandle } from '../../interfaces/file-handle.interface';
+import { FileHandle } from '../../../../core/interfaces/file-handle.interface';
 
 @Component({
   selector: 'app-drop-zone',
