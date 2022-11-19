@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FileHandle } from '../../interfaces/file-handle.interface';
+import { FileHandle } from '../../../../core/interfaces/file-handle.interface';
 import {
   faImages,
   faPlay,

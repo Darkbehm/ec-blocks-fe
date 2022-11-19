@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
-import { Product } from '../../interfaces/product.interface';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
   isDefaultRoute: boolean = false;
   addMode: boolean = false;
 

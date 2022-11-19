@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { WebSite } from '../../interfaces/web-site.interface';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { ENTER, COMMA } from '@angular/cdk/keycodes';
+import { Store } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-configuration',
@@ -13,13 +13,13 @@ export class ConfigurationComponent {
   jsCode: string = ``;
   cssCode: string = ``;
   panelOpenState: boolean = false;
-  webSite: WebSite = {
-    title: '',
+  Store: any = {
+    name: '',
     description: '',
   };
 
   configurationForm: FormGroup = this.fb.group({
-    title: [''],
+    name: [''],
     description: [''],
   });
 

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Template } from '../../interfaces/template.interface';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Template } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-manage-template',

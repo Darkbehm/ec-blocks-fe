@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faChartColumn, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faClone } from '@fortawesome/free-regular-svg-icons';
-import Feature from '../../models/feature.model';
-import { Store } from 'src/app/modules/admin/interfaces/store.interface';
-import { fakeStores } from 'src/utils/fakeData';
+import { fakeStores } from 'src/app/core/utils/fakeData';
+import { FeatureCard, Store } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,7 @@ import { fakeStores } from 'src/utils/fakeData';
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-  features: Feature[] = [
+  features: FeatureCard[] = [
     {
       title: 'Te ayudamos a crecer',
       description:

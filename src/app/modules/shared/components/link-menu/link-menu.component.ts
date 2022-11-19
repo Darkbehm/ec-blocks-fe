@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { LinkMenu } from '../../interfaces/link-menu.interface';
+import { LinkMenu } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-link-menu',

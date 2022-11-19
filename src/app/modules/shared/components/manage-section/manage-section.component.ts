@@ -1,9 +1,9 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Plan } from 'src/app/modules/admin/interfaces/plan.interface';
-import { Page } from 'src/app/modules/business/interfaces/page.interface';
-import { Product } from 'src/app/modules/business/interfaces/product.interface';
-import { Template } from '../../../admin/interfaces/template.interface';
-import { Category } from '../../../business/interfaces/category.interface';
+import { Plan } from 'src/app/core/interfaces/plan.interface';
+import { Page } from 'src/app/core/interfaces/page.interface';
+import { Product } from 'src/app/core/interfaces/product.interface';
+import { Template } from 'src/app/core/interfaces/template.interface';
+import { Category } from 'src/app/core/interfaces/category.interface';
 
 @Component({
   selector: 'app-manage-section',

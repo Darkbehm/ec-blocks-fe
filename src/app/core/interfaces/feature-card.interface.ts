@@ -1,6 +1,6 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-export default interface Feature {
+export interface FeatureCard {
   title: string;
   description: string;
   //fontawesome icon name

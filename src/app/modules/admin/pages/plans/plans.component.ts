@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Plan } from '../../interfaces/plan.interface';
+import { Plan } from '../../../../core/interfaces/plan.interface';
 
 @Component({
   selector: 'app-plans',
