@@ -15,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { StoresLandingComponent } from './pages/stores-landing/stores-landing.component';
+import { NonAuthorizedComponent } from './pages/non-authorized/non-authorized.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { StoresLandingComponent } from './pages/stores-landing/stores-landing.co
     LoginComponent,
     CardFormLoginComponent,
     StoresLandingComponent,
+    NonAuthorizedComponent,
   ],
   imports: [
     CommonModule,

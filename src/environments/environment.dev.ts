@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   backendURL: 'https://ec-blocks-be-develop.up.railway.app/ecb-api/',
 };

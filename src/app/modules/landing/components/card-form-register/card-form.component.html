@@ -41,13 +41,15 @@
         </mat-form-field>
       </div>
       <div class="fields">
-        <mat-checkbox>
+        <mat-checkbox formControlName="acceptTos">
           Acepto los
           <a mat-button [routerLink]="['/tos']"> Terminos y condiciones</a>
           y la
           <a mat-button [routerLink]="['/privacy']"> Politica de privacidad</a>
         </mat-checkbox>
-        <mat-checkbox> Registrar unicamente como comprador. </mat-checkbox>
+        <mat-checkbox formControlName="isBuyer">
+          Registrar unicamente como comprador.
+        </mat-checkbox>
       </div>
 
       <div class="buttons">
@@ -59,6 +61,7 @@
           mat-raised-button
           color="primary"
           class="save-btn"
+          (click)="submitFunction()"
         >
           <span class="box-animation">Registrarse</span>
         </button>
@@ -66,3 +69,4 @@
     </div>
   </form>
 </mat-card>
+<app-loader-circle *ngIf="loading"></app-loader-circle>

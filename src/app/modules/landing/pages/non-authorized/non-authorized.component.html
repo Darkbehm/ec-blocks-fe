@@ -1,0 +1,30 @@
+<div class="login">
+  <app-navbar></app-navbar>
+  <main>
+    <section>
+      <div class="tittle">
+        <h1 class="italic-font">Acceso no autorizado</h1>
+        <div class="dotted-primary"></div>
+      </div>
+      <mat-card class="card">
+        <mat-card-content class="content">
+          <h2 class="text-center">
+            No tienes los permisos para acceder a esta página.
+          </h2>
+          <br />
+          <p>
+            Si crees que esto es un error, por favor contacte con el
+            administrador.
+          </p>
+          <br />
+          <br />
+          <button mat-raised-button color="primary" routerLink="/">
+            <span class="box-animation">Volver al inicio</span>
+          </button>
+        </mat-card-content>
+      </mat-card>
+      <div class="dotted-accent"></div>
+    </section>
+    <app-footer></app-footer>
+  </main>
+</div>
