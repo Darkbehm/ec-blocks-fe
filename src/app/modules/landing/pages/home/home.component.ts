@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
         [USER_TYPES.admin]: '/admin',
         [USER_TYPES.buyer]: '/cart',
         [USER_TYPES.seller]: '/business',
-        [USER_TYPES.unknown]: '/login',
+        [USER_TYPES.unknown]: '/register',
       };
       this.userType = this.tokenStorage.getUser().type;
       this.route = routes[this.userType];
