@@ -1,4 +1,4 @@
-@use '../../../../../styles.scss' as root;
+@use 'src/styles.scss' as root;
 
 footer {
   z-index: -10;
@@ -79,7 +79,7 @@ footer {
 .tos {
   height: 3.75rem;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   .link {
     margin-left: 2rem;

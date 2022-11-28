@@ -16,6 +16,7 @@ import { CodeEditorComponent } from './components/code-editor/code-editor.compon
 import { CardStoreComponent } from './components/card-store/card-store.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
+import { LoaderCircleComponent } from './components/loader-circle/loader-circle.component';
 
 @NgModule({
   exports: [
@@ -31,6 +32,7 @@ import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
     CodeEditorComponent,
     DropZoneComponent,
     CardStoreComponent,
+    LoaderCircleComponent,
   ],
   imports: [
     CommonModule,
@@ -53,6 +55,7 @@ import { DropZoneComponent } from './components/drop-zone/drop-zone.component';
     CodeEditorComponent,
     DropZoneComponent,
     CardStoreComponent,
+    LoaderCircleComponent,
   ],
 })
 export class SharedModule {}

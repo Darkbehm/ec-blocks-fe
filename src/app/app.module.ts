@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MaterialModule } from '../material.module';
@@ -27,6 +28,7 @@ import { LandingModule } from './modules/landing/landing.module';
     LandingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RxReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

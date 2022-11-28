@@ -3,6 +3,8 @@ import { faChartColumn, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faClone } from '@fortawesome/free-regular-svg-icons';
 import { fakeStores } from 'src/app/core/utils/fakeData';
 import { FeatureCard, Store } from 'src/app/core/interfaces';
+import { TokenStorageService } from 'src/app/core/services/token-storage.service';
+import { USER_TYPES } from 'src/app/core/enums';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +12,7 @@ import { FeatureCard, Store } from 'src/app/core/interfaces';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private tokenStorage: TokenStorageService) {}
   features: FeatureCard[] = [
     {
       title: 'Te ayudamos a crecer',
@@ -34,6 +36,10 @@ export class HomeComponent implements OnInit {
       link: 'link3',
     },
   ];
+  isLogged = false;
+  userType = USER_TYPES.unknown;
+  USER_TYPES = USER_TYPES;
+  route = '/login';
 
   stores: Store[] = fakeStores.slice(0, 4);
 
@@ -44,5 +50,17 @@ export class HomeComponent implements OnInit {
     });
   }
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLogged = !!this.tokenStorage.getToken();
+    if (this.isLogged) {
+      const routes = {
+        [USER_TYPES.admin]: '/admin',
+        [USER_TYPES.buyer]: '/cart',
+        [USER_TYPES.seller]: '/business',
+        [USER_TYPES.unknown]: '/login',
+      };
+      this.userType = this.tokenStorage.getUser().type;
+      this.route = routes[this.userType];
+    }
+  }
 }
