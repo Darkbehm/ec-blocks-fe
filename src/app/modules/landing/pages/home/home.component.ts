@@ -49,18 +49,16 @@ export class HomeComponent implements OnInit {
       behavior: 'smooth',
     });
   }
-  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
+
   ngOnInit(): void {
     this.isLogged = !!this.tokenStorage.getToken();
-    if (this.isLogged) {
-      const routes = {
-        [USER_TYPES.admin]: '/admin',
-        [USER_TYPES.buyer]: '/cart',
-        [USER_TYPES.seller]: '/business',
-        [USER_TYPES.unknown]: '/register',
-      };
-      this.userType = this.tokenStorage.getUser().type;
-      this.route = routes[this.userType];
-    }
+    const routes = {
+      [USER_TYPES.admin]: '/admin',
+      [USER_TYPES.buyer]: '/cart',
+      [USER_TYPES.seller]: '/business',
+      [USER_TYPES.unknown]: '/register',
+    };
+    this.userType = this.tokenStorage.getUser()?.type ?? USER_TYPES.unknown;
+    this.route = routes[this.userType];
   }
 }
