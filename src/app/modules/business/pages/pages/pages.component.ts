@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Page } from '../../interfaces/page.interface';
+import { Page } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-pages',

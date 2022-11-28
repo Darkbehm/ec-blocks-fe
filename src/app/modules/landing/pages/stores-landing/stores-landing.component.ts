@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from 'src/app/modules/admin/interfaces/store.interface';
-import { fakeStores } from 'src/utils/fakeData';
+import { Store } from 'src/app/core/interfaces';
+import { fakeStores } from 'src/app/core/utils/fakeData';
 
 @Component({
   selector: 'app-stores',

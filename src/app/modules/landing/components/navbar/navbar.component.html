@@ -30,27 +30,51 @@
     <div [ngSwitch]="userType" class="navbar-switch">
       <div *ngSwitchCase="USER_TYPES.admin">
         <button
+          mat-button
+          class="links"
+          routerLinkActive="active"
+          (click)="logout()"
+        >
+          <span class="box-animation"> Cerrar Sesion </span>
+        </button>
+        <button
           mat-raised-button
           color="primary"
           class="button-primary"
           [routerLink]="['/admin']"
           routerLinkActive="active"
         >
-          Administracion
+          <span class="box-animation">Administracion</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.seller">
         <button
+          mat-button
+          class="links"
+          routerLinkActive="active"
+          (click)="logout()"
+        >
+          <span class="box-animation"> Cerrar Sesion </span>
+        </button>
+        <button
           mat-raised-button
           color="primary"
           class="button-primary"
-          [routerLink]="['/company']"
+          [routerLink]="['/business']"
           routerLinkActive="active"
         >
-          Mi tienda
+          <span class="box-animation">Mi tienda</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.buyer">
+        <button
+          mat-button
+          class="links"
+          routerLinkActive="active"
+          (click)="logout()"
+        >
+          <span class="box-animation"> Cerrar Sesion </span>
+        </button>
         <button
           mat-raised-button
           color="primary"
@@ -58,7 +82,7 @@
           [routerLink]="['/cart']"
           routerLinkActive="active"
         >
-          Mi carrito
+          <span class="box-animation">Mi carrito</span>
         </button>
       </div>
       <div *ngSwitchCase="USER_TYPES.unknown">

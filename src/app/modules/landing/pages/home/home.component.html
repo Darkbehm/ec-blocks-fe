@@ -43,14 +43,35 @@
           mat-raised-button
           color="accent"
           class="button-accent"
-          [routerLink]="['/register']"
+          [routerLink]="[route]"
           routerLinkActive="active"
+          [ngSwitch]="userType"
         >
-          <span class="box-animation mat-subheading-2 button-accent-text"
+          <span
+            *ngSwitchCase="USER_TYPES.unknown"
+            class="box-animation mat-subheading-2 button-accent-text"
             >Empieza gratis</span
           >
+          <span
+            *ngSwitchCase="USER_TYPES.admin"
+            class="box-animation mat-subheading-2 button-accent-text"
+            >Administración</span
+          >
+          <span
+            *ngSwitchCase="USER_TYPES.seller"
+            class="box-animation mat-subheading-2 button-accent-text"
+            >Mi Tienda</span
+          >
+          <span
+            *ngSwitchCase="USER_TYPES.buyer"
+            class="box-animation mat-subheading-2 button-accent-text"
+            >Mi Carrito</span
+          >
         </button>
-        <div class="mat-body-1">No se necesita tarjeta de crédito.</div>
+
+        <div *ngIf="!isLogged" class="mat-body-1">
+          No se necesita tarjeta de crédito.
+        </div>
       </div>
       <a
         mat-button

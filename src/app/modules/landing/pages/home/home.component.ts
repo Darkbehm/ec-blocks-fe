@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { faChartColumn, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faClone } from '@fortawesome/free-regular-svg-icons';
-import Feature from '../../models/feature.model';
-import { Store } from 'src/app/modules/admin/interfaces/store.interface';
-import { fakeStores } from 'src/utils/fakeData';
+import { fakeStores } from 'src/app/core/utils/fakeData';
+import { FeatureCard, Store } from 'src/app/core/interfaces';
+import { TokenStorageService } from 'src/app/core/services/token-storage.service';
+import { USER_TYPES } from 'src/app/core/enums';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,8 @@ import { fakeStores } from 'src/utils/fakeData';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-  features: Feature[] = [
+  constructor(private tokenStorage: TokenStorageService) {}
+  features: FeatureCard[] = [
     {
       title: 'Te ayudamos a crecer',
       description:
@@ -35,6 +36,10 @@ export class HomeComponent implements OnInit {
       link: 'link3',
     },
   ];
+  isLogged = false;
+  userType = USER_TYPES.unknown;
+  USER_TYPES = USER_TYPES;
+  route = '/login';
 
   stores: Store[] = fakeStores.slice(0, 4);
 
@@ -45,5 +50,17 @@ export class HomeComponent implements OnInit {
     });
   }
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLogged = !!this.tokenStorage.getToken();
+    if (this.isLogged) {
+      const routes = {
+        [USER_TYPES.admin]: '/admin',
+        [USER_TYPES.buyer]: '/cart',
+        [USER_TYPES.seller]: '/business',
+        [USER_TYPES.unknown]: '/login',
+      };
+      this.userType = this.tokenStorage.getUser().type;
+      this.route = routes[this.userType];
+    }
+  }
 }

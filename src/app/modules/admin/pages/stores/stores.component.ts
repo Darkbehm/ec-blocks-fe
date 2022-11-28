@@ -1,8 +1,8 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import { Store } from '../../interfaces/store.interface';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { fakeStores } from 'src/utils/fakeData';
+import { Store } from 'src/app/core/interfaces';
+import { fakeStores } from 'src/app/core/utils/fakeData';
 
 @Component({
   selector: 'app-stores',

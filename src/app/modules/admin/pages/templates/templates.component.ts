@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Template } from '../../interfaces/template.interface';
+import { Template } from 'src/app/core/interfaces';
 
 @Component({
   selector: 'app-templates',

@@ -1,39 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MaterialModule } from '../material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from '../material.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NavbarComponent } from './modules/landing/components/navbar/navbar.component';
-import { HomeComponent } from './modules/landing/pages/home/home.component';
-import { BackgroundComponent } from './modules/landing/components/background/background.component';
-import { SharedModule } from './modules/shared/shared.module';
 import { AdminModule } from './modules/admin/admin.module';
 import { BusinessModule } from './modules/business/business.module';
-import { CardLandingComponent } from './modules/landing/components/card-landing/card-landing.component';
-import { FooterComponent } from './modules/landing/components/footer/footer.component';
-import { RegisterComponent } from './modules/landing/pages/register/register.component';
-import { CardFormComponent } from './modules/landing/components/card-form-register/card-form.component';
-import { LoginComponent } from './modules/landing/pages/login/login.component';
-import { CardFormLoginComponent } from './modules/landing/components/card-form-login/card-form-login.component';
-import { StoresLandingComponent } from './modules/landing/pages/stores-landing/stores-landing.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { LandingModule } from './modules/landing/landing.module';
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    BackgroundComponent,
-    CardLandingComponent,
-    FooterComponent,
-    RegisterComponent,
-    CardFormComponent,
-    LoginComponent,
-    CardFormLoginComponent,
-    StoresLandingComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -43,7 +25,10 @@ import { StoresLandingComponent } from './modules/landing/pages/stores-landing/s
     SharedModule,
     AdminModule,
     BusinessModule,
+    LandingModule,
     ReactiveFormsModule,
+    HttpClientModule,
+    RxReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
