@@ -1,15 +1,20 @@
 export interface Store {
   id: string;
-  name: string;
+  tittle: string;
   created: Date;
   description: string;
   keyWords: string[];
-  favIcon: any;
-  logo: string;
-  images?: any[];
-  videos?: any[];
+  favIcon: file;
+  logo: file;
+  images?: file[];
+  videos?: file[];
   otherFiles?: any[];
   cssCode?: string;
   jsCode?: string;
-  bgImage?: string;
+  bgImage?: file;
 }
+
+export type file = {
+  key: string;
+  url: string;
+};

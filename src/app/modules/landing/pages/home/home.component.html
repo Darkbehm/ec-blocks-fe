@@ -26,6 +26,7 @@
           [store]="store"
         ></app-card-store>
         <a
+          *ngIf="stores.length <= 4 && stores.length > 0"
           mat-button
           color="accent"
           class="mat-body-2 italic-font ➡️"
