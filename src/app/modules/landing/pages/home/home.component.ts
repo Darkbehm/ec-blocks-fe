@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { faChartColumn, faHandshake } from '@fortawesome/free-solid-svg-icons';
 import { faClone } from '@fortawesome/free-regular-svg-icons';
-import { fakeStores } from 'src/app/core/utils/fakeData';
 import { FeatureCard, Store } from 'src/app/core/interfaces';
 import { TokenStorageService } from 'src/app/core/services/token-storage.service';
 import { USER_TYPES } from 'src/app/core/enums';
+import { StoreService } from 'src/app/core/services/store.service';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,10 @@ import { USER_TYPES } from 'src/app/core/enums';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private tokenStorage: TokenStorageService) {}
+  constructor(
+    private tokenStorage: TokenStorageService,
+    private storeService: StoreService,
+  ) {}
   features: FeatureCard[] = [
     {
       title: 'Te ayudamos a crecer',
@@ -41,7 +44,7 @@ export class HomeComponent implements OnInit {
   USER_TYPES = USER_TYPES;
   route = '/login';
 
-  stores: Store[] = fakeStores.slice(0, 4);
+  stores: Store[] = [];
 
   scrollToTop(): void {
     window.scrollTo({
@@ -60,5 +63,11 @@ export class HomeComponent implements OnInit {
     };
     this.userType = this.tokenStorage.getUser()?.type ?? USER_TYPES.unknown;
     this.route = routes[this.userType];
+
+    this.storeService
+      .getStores(1)
+      .subscribe((stores: { stores: Store[]; totalPages: number }) => {
+        this.stores = stores.stores.slice(0, 4);
+      });
   }
 }

@@ -20,6 +20,10 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 3.75rem;
 }
+.loader {
+  justify-self: center;
+  margin: 0 0 10vh;
+}
 
 .filters {
   display: grid;

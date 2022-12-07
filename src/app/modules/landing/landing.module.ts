@@ -16,6 +16,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { StoresLandingComponent } from './pages/stores-landing/stores-landing.component';
 import { NonAuthorizedComponent } from './pages/non-authorized/non-authorized.component';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,8 @@ import { NonAuthorizedComponent } from './pages/non-authorized/non-authorized.co
     SharedModule,
     MaterialModule,
     FontAwesomeModule,
+    InfiniteScrollModule,
   ],
+  exports: [NavbarComponent, FooterComponent],
 })
 export class LandingModule {}

@@ -1,18 +1,25 @@
 <div class="container">
   <mat-card class="card">
     <mat-card-title class="padded header-card">
-      <img [src]="store.logo" [alt]="store.name" class="logo" />
-      <div class="mat-body-2">{{ store.name }}</div>
+      <img [src]="store.logo.url" [alt]="store.tittle" class="logo" />
+      <div class="mat-body-2">{{ store.tittle }}</div>
     </mat-card-title>
     <mat-card-content>
       <div
-        [style.background-image]="'url(' + store.bgImage + ')'"
+        [style.background-image]="
+          'url(' + (store.bgImage?.url ?? store.logo.url) + ')'
+        "
         class="bg-image"
       ></div>
       <p class="mat-body-1 padded">{{ store.description }}</p>
     </mat-card-content>
     <mat-card-actions class="actions padded">
-      <a mat-button color="accent" class="mat-body-2 italic-font">
+      <a
+        mat-button
+        color="accent"
+        class="mat-body-2 italic-font"
+        [routerLink]="['/store', store.id]"
+      >
         Ver más<span class="fira-code">-></span>
       </a>
     </mat-card-actions>
