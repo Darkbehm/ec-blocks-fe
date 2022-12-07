@@ -8,9 +8,7 @@ import { Store } from 'src/app/core/interfaces';
 })
 export class CardStoreComponent implements OnInit {
   @Input() store: Store;
-  getBgImage(): string {
-    return `url(${this.store.bgImage})`;
-  }
+
   constructor() {}
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method

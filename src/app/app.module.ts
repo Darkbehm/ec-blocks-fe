@@ -13,9 +13,11 @@ import { AdminModule } from './modules/admin/admin.module';
 import { BusinessModule } from './modules/business/business.module';
 import { SharedModule } from './modules/shared/shared.module';
 import { LandingModule } from './modules/landing/landing.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { NotFoundComponent } from './modules/store/pages/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,6 +31,7 @@ import { LandingModule } from './modules/landing/landing.module';
     ReactiveFormsModule,
     HttpClientModule,
     RxReactiveFormsModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

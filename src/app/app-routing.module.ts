@@ -31,6 +31,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: 'store',
+    loadChildren: () =>
+      import('./modules/store/stores-routing.module').then(
+        (m) => m.StoreRoutingModule,
+      ),
+  },
+  {
     //everything else
     path: '**',
     redirectTo: '',

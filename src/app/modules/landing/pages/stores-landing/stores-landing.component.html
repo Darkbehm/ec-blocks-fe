@@ -1,6 +1,11 @@
 <div class="stores">
   <app-navbar></app-navbar>
-  <main>
+  <main
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="500"
+    (scrolled)="onScroll()"
+  >
     <div class="filters">
       <mat-form-field name="search">
         <mat-label>Buscar</mat-label>
@@ -34,6 +39,11 @@
         [store]="store"
       ></app-card-store>
     </div>
+    <app-loader-circle
+      *ngIf="loading"
+      [wrapped]="false"
+      class="loader"
+    ></app-loader-circle>
     <a mat-button color="primary" class="mat-body-2 ↑" (click)="scrollToTop()">
       <span class="fira-code">↑</span>
     </a>

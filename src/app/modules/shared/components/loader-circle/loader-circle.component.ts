@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-loader-circle',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoaderCircleComponent implements OnInit {
   constructor() {}
+  class = 'wrapper';
+  @Input() wrapped: boolean;
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.wrapped === false) {
+      this.class = 'normal';
+    }
+  }
 }
