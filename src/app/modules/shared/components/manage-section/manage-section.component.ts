@@ -20,6 +20,7 @@ export class ManageSectionComponent {
     Plan | Template | Product | Category | Page
   > = new EventEmitter<Plan | Template | Product | Category | Page>();
   @Output() addState: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() deleteMode: EventEmitter<any> = new EventEmitter<any>();
 
   getOption(option: Plan | Template | Product | Category | Page) {
     this.optionSelected.emit(option);
@@ -27,5 +28,9 @@ export class ManageSectionComponent {
 
   getAddState(value: boolean) {
     this.addState.emit(value);
+  }
+
+  getDeleteMode(value: any) {
+    this.deleteMode.emit(value);
   }
 }

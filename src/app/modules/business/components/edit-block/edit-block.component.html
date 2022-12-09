@@ -1,14 +1,18 @@
 <section class="container-modal-block">
-  <form>
+  <form [formGroup]="blockForm">
     <div class="header-modal-edit">
       <div class="fields-modal-container">
         <mat-form-field appearance="outline" color="black">
           <mat-label>Nombre del bloque</mat-label>
-          <input matInput placeholder="Nombre del bloque" />
+          <input
+            matInput
+            placeholder="Nombre del bloque"
+            formControlName="name"
+          />
         </mat-form-field>
         <mat-form-field appearance="outline" color="black">
           <mat-label>Color</mat-label>
-          <input matInput placeholder="Color" />
+          <input matInput placeholder="Color" formControlName="color" />
           <mat-icon matSuffix color="primary">palette</mat-icon>
         </mat-form-field>
       </div>
@@ -27,7 +31,11 @@
           </span>
         </ng-template>
         <div class="editor">
-          <app-code-editor language="json" [code]="jsonCode"></app-code-editor>
+          <app-code-editor
+            language="json"
+            (getCode)="getJsonCode($event)"
+            [code]="readComponents"
+          ></app-code-editor>
         </div>
       </mat-tab>
 
@@ -39,7 +47,11 @@
           </span>
         </ng-template>
         <div class="editor">
-          <app-code-editor language="js" [code]="jsCode"></app-code-editor>
+          <app-code-editor
+            language="js"
+            (getCode)="getJsCode($event)"
+            [code]="readJsCode"
+          ></app-code-editor>
         </div>
       </mat-tab>
 
@@ -52,7 +64,11 @@
         </ng-template>
 
         <div class="editor">
-          <app-code-editor language="css" [code]="cssCode"></app-code-editor>
+          <app-code-editor
+            language="css"
+            (getCode)="getCssCode($event)"
+            [code]="readCssCode"
+          ></app-code-editor>
         </div>
       </mat-tab>
 
@@ -65,13 +81,23 @@
         </ng-template>
 
         <div class="editor">
-          <app-code-editor language="html" [code]="htmlCode"></app-code-editor>
+          <app-code-editor
+            language="html"
+            (getCode)="getHtmlCode($event)"
+            [code]="readHtmlCode"
+          ></app-code-editor>
         </div>
       </mat-tab>
     </mat-tab-group>
 
     <mat-dialog-actions align="end">
-      <button type="submit" mat-raised-button color="accent" class="save-btn">
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        class="save-btn"
+        (click)="saveBlockChanges()"
+      >
         Guardar Cambios
       </button>
     </mat-dialog-actions>

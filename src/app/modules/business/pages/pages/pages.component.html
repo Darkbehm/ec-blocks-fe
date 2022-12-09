@@ -6,9 +6,16 @@
     css="business"
     (optionSelected)="getOptionSelected($event)"
     (addState)="getAddState($event)"
+    (deleteMode)="getDeleteMode($event)"
   ></app-manage-section>
 </div>
 
 <div class="container-manage-page" *ngIf="!isDefaultRoute">
-  <app-manage-pages [addState]="addMode" [page]="page"></app-manage-pages>
+  <app-manage-pages
+    [addState]="addMode"
+    [page]="page"
+    (saveMode)="save($event)"
+    (updateBlock)="updateBlock($event)"
+    [editMode]="editMode"
+  ></app-manage-pages>
 </div>

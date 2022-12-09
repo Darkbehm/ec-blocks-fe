@@ -1,7 +1,8 @@
 export interface Block {
-  id?: string;
+  _id?: string;
   name: string;
   color: string;
+  cssClass?: string;
   cssCode?: string;
   htmlCode?: string;
   jsCode?: string;

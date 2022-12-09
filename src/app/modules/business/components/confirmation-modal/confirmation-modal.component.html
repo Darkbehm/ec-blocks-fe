@@ -1,0 +1,14 @@
+<div class="confirmation">
+  <p>
+    Estas seguro que deseas eliminar
+    <b
+      ><i>{{ data.name }}</i></b
+    >
+  </p>
+  <div mat-dialog-actions align="end">
+    <button mat-button (click)="cancel()" class="cancel-btn">Cancelar</button>
+    <button mat-button cdkFocusInitial (click)="remove()" class="delete-btn">
+      Eliminar
+    </button>
+  </div>
+</div>
