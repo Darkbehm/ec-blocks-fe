@@ -1,7 +1,8 @@
 import { Block } from './block.interface';
 
 export interface Page {
-  id?: string;
+  _id?: string;
   name: string;
+  store?: string;
   blocks: Block[];
 }

@@ -6,13 +6,18 @@
       mat-mini-fab
       color="white-custom"
       class="edit"
-      [routerLink]="['edit', option.id]"
+      [routerLink]="['edit', option._id]"
       routerLinkActive="hide"
       (click)="sendPlan(option)"
     >
       <mat-icon color="accent">edit</mat-icon>
     </button>
-    <button mat-mini-fab color="white-custom" class="delete">
+    <button
+      mat-mini-fab
+      color="white-custom"
+      class="delete"
+      (click)="deleteMode()"
+    >
       <mat-icon color="primary">delete</mat-icon>
     </button>
   </div>

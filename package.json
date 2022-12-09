@@ -28,7 +28,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@rxweb/reactive-form-validators": "^2.1.7",
+    "@rxweb/reactive-form-validators": "^13.0.0",
     "ngx-infinite-scroll": "^14.0.1",
     "prismjs": "^1.29.0",
     "rxjs": "~7.5.0",

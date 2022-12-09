@@ -1,0 +1,15 @@
+@use '../../../../../styles.scss' as stylesRoot;
+
+.confirmation {
+  background-color: stylesRoot.$white-custom;
+}
+
+.cancel-btn {
+  color: stylesRoot.$white-custom;
+  background-color: stylesRoot.$accent;
+}
+
+.delete-btn {
+  color: stylesRoot.$black;
+  background-color: stylesRoot.$primary;
+}

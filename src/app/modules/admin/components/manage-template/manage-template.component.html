@@ -50,7 +50,6 @@
           </mat-expansion-panel-header>
           <app-code-editor
             language="css"
-            [code]="cssCode"
             (getCode)="getCSSCode($event)"
           ></app-code-editor>
         </mat-expansion-panel>
@@ -67,7 +66,6 @@
           </mat-expansion-panel-header>
           <app-code-editor
             language="js"
-            [code]="jsCode"
             (getCode)="getJSCode($event)"
           ></app-code-editor>
         </mat-expansion-panel>
