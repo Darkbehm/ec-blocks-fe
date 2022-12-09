@@ -1,15 +1,26 @@
 <form [formGroup]="pageForm" class="page-form">
   <section class="manage-page-header">
-    <h1 class="title-page">{{ page.name || 'Default Page' }}</h1>
+    <mat-form-field appearance="outline" color="black">
+      <mat-label>Nombre de la pagina</mat-label>
+      <input
+        matInput
+        placeholder="Nombre de la categoria"
+        formControlName="name"
+      />
+    </mat-form-field>
     <div class="actions-page-form">
       <mat-slide-toggle>Ver Lineas Guia</mat-slide-toggle>
       <button mat-raised-button color="primary" class="preview-btn">
         Ver Preview
       </button>
-      <!-- <button mat-raised-button color="white-custom" class="lines-btn">
-        Ver Lineas Guia
-      </button> -->
-      <button type="submit" mat-raised-button color="accent" class="save-btn">
+
+      <button
+        type="submit"
+        mat-raised-button
+        color="accent"
+        class="save-btn"
+        (click)="save()"
+      >
         Guardar Cambios
       </button>
     </div>
@@ -18,103 +29,15 @@
   <section class="workspace">
     <div *ngFor="let i of rows" [class]="'element row-' + i"></div>
     <div *ngFor="let i of columns" [class]="'element column-' + i"></div>
-    <div class="block navbar-block">
+    <div *ngFor="let block of page.blocks" [class]="'block ' + block.cssClass">
       <div class="block-header">
-        <span class="block-title">Name...</span>
+        <span class="block-title">{{ block.name }}</span>
         <span class="block-actions">
           <button
             mat-raised-button
             color="white-custom"
             class="lines-btn"
-            (click)="openDialog()"
-          >
-            Editar
-          </button>
-          <button
-            mat-raised-button
-            color="primary"
-            class="preview-btn delete-block-btn"
-          >
-            Eliminar
-          </button>
-        </span>
-      </div>
-    </div>
-
-    <div class="block panel-block">
-      <div class="block-header">
-        <span class="block-title">Name...</span>
-        <span class="block-actions">
-          <button
-            mat-raised-button
-            color="white-custom"
-            class="lines-btn"
-            (click)="openDialog()"
-          >
-            Editar
-          </button>
-          <button
-            mat-raised-button
-            color="primary"
-            class="preview-btn delete-block-btn"
-          >
-            Eliminar
-          </button>
-        </span>
-      </div>
-    </div>
-
-    <div class="block unnamed-block">
-      <div class="block-header">
-        <span class="block-title">Name...</span>
-        <span class="block-actions">
-          <button
-            mat-raised-button
-            color="white-custom"
-            class="lines-btn"
-            (click)="openDialog()"
-          >
-            Editar
-          </button>
-          <button
-            mat-raised-button
-            color="primary"
-            class="preview-btn delete-block-btn"
-          >
-            Eliminar
-          </button>
-        </span>
-      </div>
-    </div>
-
-    <div class="block products-block">
-      <div class="block-header">
-        <span class="block-title">Name...</span>
-        <span class="block-actions">
-          <button
-            mat-raised-button
-            color="white-custom"
-            class="lines-btn"
-            (click)="openDialog()"
-          >
-            Editar
-          </button>
-          <button mat-raised-button color="primary" class="preview-btn">
-            Eliminar
-          </button>
-        </span>
-      </div>
-    </div>
-
-    <div class="block footer-block">
-      <div class="block-header">
-        <span class="block-title">Name...</span>
-        <span class="block-actions">
-          <button
-            mat-raised-button
-            color="white-custom"
-            class="lines-btn"
-            (click)="openDialog()"
+            (click)="openDialog(block)"
           >
             Editar
           </button>

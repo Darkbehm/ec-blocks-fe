@@ -14,6 +14,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ManagePagesComponent } from './components/manage-pages/manage-pages.component';
 import { EditBlockComponent } from './components/edit-block/edit-block.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ConfirmationModalComponent } from './components/confirmation-modal/confirmation-modal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CategoriesComponent,
     ManagePagesComponent,
     EditBlockComponent,
+    ConfirmationModalComponent,
   ],
   imports: [
     CommonModule,

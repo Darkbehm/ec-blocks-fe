@@ -23,16 +23,16 @@ import { PrismjsService } from '../../services/prismjs.service';
   styleUrls: ['./code-editor.component.scss'],
 })
 export class CodeEditorComponent
-  implements OnInit, AfterViewChecked, AfterViewInit, OnDestroy, OnChanges
+  implements OnInit, AfterViewChecked, AfterViewInit, OnDestroy
 {
   @Input() language: string = '';
   @Input() code: string = '';
   ngOnChanges(changes: SimpleChanges) {
-    this.form.setValue({ content: changes['code'].currentValue });
+    this.form.setValue({ content: changes['code']?.currentValue || '' });
     this.renderer.setProperty(
       this.codeContent.nativeElement,
       'innerHTML',
-      changes['code'].currentValue,
+      changes['code']?.currentValue || '',
     );
     this.highlighted = true;
   }
@@ -50,7 +50,7 @@ export class CodeEditorComponent
   highlighted = false;
 
   form = this.fb.group({
-    content: this.code,
+    content: this.code || '',
   });
 
   get contentControl() {
@@ -64,13 +64,6 @@ export class CodeEditorComponent
   ) {}
 
   ngOnInit(): void {
-    this.form.setValue({ content: this.code });
-    this.renderer.setProperty(
-      this.codeContent.nativeElement,
-      'innerHTML',
-      this.code,
-    );
-    this.highlighted = true;
     this.listenForm();
     this.synchronizeScroll();
   }
@@ -82,7 +75,7 @@ export class CodeEditorComponent
   ngAfterViewChecked() {
     if (this.highlighted) {
       this.prismjsService.highlightAll();
-      this.highlighted = false;
+      // this.highlighted = false;
     }
   }
 
