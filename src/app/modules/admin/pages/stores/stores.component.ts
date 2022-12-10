@@ -15,7 +15,8 @@ export class StoresComponent implements AfterViewInit, OnInit {
   constructor(private storeService: StoreService) {}
   page: number = 1;
   displayedColumns: string[] = ['id', 'name', 'created', 'actions'];
-  dataSource: MatTableDataSource<Store>;
+  stores: Store[] = [];
+  dataSource = new MatTableDataSource<Store>(this.stores);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
@@ -33,8 +34,6 @@ export class StoresComponent implements AfterViewInit, OnInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
   }
-
-  stores: Store[] = [];
 
   changePage(event: PageEvent) {
     this.page = event.pageIndex + 1;
